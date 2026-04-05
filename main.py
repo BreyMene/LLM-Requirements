@@ -1,21 +1,28 @@
-from fastapi import FastAPI
+import json
+from fastapi import FastAPI, HTTPException
 from Client import generate
-from Prompt import analysis_prompt, generation_prompt
-
+from Prompt import analysis, generation
+from os import environ as env
 app = FastAPI()
+language = env.get("language")
 
-@app.get("/")
-def root():
-    return {"message": "LLM Requisitos API"}
+def safe_json_load(response_text):  
+    try:
+        return json.loads(response_text)
+    except:
+        return {
+            "error": "Invalid LLM response",
+            "raw": response_text
+        }
 
 @app.post("/analyze")
 def analyze_req(data: dict):
-    prompt = analysis_prompt(data["text"])
+    prompt = analysis(data["text"], language)
     result = generate(prompt)
-    return {"result": result}
+    return safe_json_load(result)
 
 @app.post("/generate")
 def generate_req(data: dict):
-    prompt = generation_prompt(data["description"])
+    prompt = generation(data["description"], language)
     result = generate(prompt)
-    return {"result": result}
+    return safe_json_load(result)
