@@ -10,4 +10,9 @@ def generate(prompt, model="mistral"):
         "stream": False
     })
     
-    return response.json()["response"]
+    data = response.json()
+    if "response" in data:
+        return data["response"]
+    else:
+        # Si hay error, devolver el mensaje de error
+        return f"Error de Ollama: {data.get('error', 'Respuesta inesperada')}"
