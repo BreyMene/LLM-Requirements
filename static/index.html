@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditor de Requisitos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            color: #667eea;
+            background: #f5f5f5;
+        }
+
+        .tab-button.active {
+            color: #667eea;
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 1.05em;
+        }
+
+        .form-group textarea,
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            resize: vertical;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+        }
+
+        .form-group textarea:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button[type="submit"] {
+            flex: 1;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        button[type="submit"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .clear-button {
+            padding: 12px 20px;
+            background: #f5f5f5;
+            color: #666;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .clear-button:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .results {
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .results-content {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .results-content pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            font-size: 0.95em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #c62828;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .status-success {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .status-error {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Auditor de Requisitos</h1>
+            <p>Análisis y generación de requisitos con IA</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('analyze')">
+                📋 Análisis de Requisitos
+            </button>
+            <button class="tab-button" onclick="switchTab('generate')">
+                ✨ Generar Requisitos
+            </button>
+        </div>
+
+        <!-- Tab: Análisis -->
+        <div id="analyze" class="tab-content active">
+            <form id="analyzeForm" onsubmit="handleAnalyze(event)">
+                <div class="form-group">
+                    <label for="analyzeText">Ingresa el requisito para auditar:</label>
+                    <textarea id="analyzeText" placeholder="Ej: El sistema debe ser rápido y seguro para procesar datos de usuarios..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">Auditar Requisito</button>
+                    <button type="button" class="clear-button" onclick="clearAnalyze()">Limpiar</button>
+                </div>
+
+                <div id="analyzeLoading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Analizando requisito...</p>
+                </div>
+
+                <div id="analyzeError" class="error"></div>
+
+                <div id="analyzeResults" class="results">
+                    <h3>📊 Resultados del Análisis</h3>
+                    <div class="results-content">
+                        <pre id="analyzeResultsContent"></pre>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tab: Generación -->
+        <div id="generate" class="tab-content">
+            <form id="generateForm" onsubmit="handleGenerate(event)">
+                <div class="form-group">
+                    <label for="generateText">Describe lo que necesitas:</label>
+                    <textarea id="generateText" placeholder="Ej: Un sistema de autenticación seguro para usuarios con soporte de dos factores..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">Generar Requisitos</button>
+                    <button type="button" class="clear-button" onclick="clearGenerate()">Limpiar</button>
+                </div>
+
+                <div id="generateLoading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Generando requisitos...</p>
+                </div>
+
+                <div id="generateError" class="error"></div>
+
+                <div id="generateResults" class="results">
+                    <h3>✨ Requisitos Generados</h3>
+                    <div class="results-content">
+                        <pre id="generateResultsContent"></pre>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+
+        function switchTab(tabName) {
+            // Ocultar todos los tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostrar el tab seleccionado
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        async function handleAnalyze(event) {
+            event.preventDefault();
+            const text = document.getElementById('analyzeText').value.trim();
+            
+            if (!text) {
+                showAnalyzeError('Por favor ingresa un requisito para auditar');
+                return;
+            }
+
+            showAnalyzeLoading(true);
+            hideAnalyzeError();
+
+            try {
+                const response = await fetch(`${API_BASE}/analyze`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ text })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                showAnalyzeResults(data);
+            } catch (error) {
+                showAnalyzeError(`Error en la solicitud: ${error.message}`);
+                console.error('Analyze error:', error);
+            } finally {
+                showAnalyzeLoading(false);
+            }
+        }
+
+        async function handleGenerate(event) {
+            event.preventDefault();
+            const description = document.getElementById('generateText').value.trim();
+            
+            if (!description) {
+                showGenerateError('Por favor describe lo que necesitas');
+                return;
+            }
+
+            showGenerateLoading(true);
+            hideGenerateError();
+
+            try {
+                const response = await fetch(`${API_BASE}/generate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ description })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                showGenerateResults(data);
+            } catch (error) {
+                showGenerateError(`Error en la solicitud: ${error.message}`);
+                console.error('Generate error:', error);
+            } finally {
+                showGenerateLoading(false);
+            }
+        }
+
+        function showAnalyzeResults(data) {
+            const resultsDiv = document.getElementById('analyzeResults');
+            const resultsContent = document.getElementById('analyzeResultsContent');
+            resultsContent.textContent = JSON.stringify(data, null, 2);
+            resultsDiv.classList.add('show');
+        }
+
+        function showGenerateResults(data) {
+            const resultsDiv = document.getElementById('generateResults');
+            const resultsContent = document.getElementById('generateResultsContent');
+            resultsContent.textContent = JSON.stringify(data, null, 2);
+            resultsDiv.classList.add('show');
+        }
+
+        function showAnalyzeLoading(show) {
+            document.getElementById('analyzeLoading').classList.toggle('show', show);
+        }
+
+        function showGenerateLoading(show) {
+            document.getElementById('generateLoading').classList.toggle('show', show);
+        }
+
+        function showAnalyzeError(message) {
+            const errorDiv = document.getElementById('analyzeError');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        function showGenerateError(message) {
+            const errorDiv = document.getElementById('generateError');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        function hideAnalyzeError() {
+            document.getElementById('analyzeError').classList.remove('show');
+        }
+
+        function hideGenerateError() {
+            document.getElementById('generateError').classList.remove('show');
+        }
+
+        function clearAnalyze() {
+            document.getElementById('analyzeText').value = '';
+            document.getElementById('analyzeResults').classList.remove('show');
+            hideAnalyzeError();
+        }
+
+        function clearGenerate() {
+            document.getElementById('generateText').value = '';
+            document.getElementById('generateResults').classList.remove('show');
+            hideGenerateError();
+        }
+    </script>
+</body>
+</html>
