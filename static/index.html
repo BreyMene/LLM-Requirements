@@ -465,14 +465,14 @@
         function showAnalyzeResults(data) {
             const resultsDiv = document.getElementById('analyzeResults');
             const resultsContent = document.getElementById('analyzeResultsContent');
-            resultsContent.textContent = JSON.stringify(data, null, 2);
+            resultsContent.textContent = data.analysis || JSON.stringify(data, null, 2);
             resultsDiv.classList.add('show');
         }
 
         function showGenerateResults(data) {
             const resultsDiv = document.getElementById('generateResults');
             const resultsContent = document.getElementById('generateResultsContent');
-            resultsContent.textContent = JSON.stringify(data, null, 2);
+            resultsContent.textContent = data.requirements || JSON.stringify(data, null, 2);
             resultsDiv.classList.add('show');
         }
 
