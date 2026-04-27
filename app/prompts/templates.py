@@ -1,4 +1,43 @@
+"""
+Prompt Templates for Requirements Analysis and Generation
+
+This module contains specialized prompt templates following IEEE 830 standard
+and Gherkin (BDD) syntax. These templates are used to instruct the LLM on how to
+analyze and generate software requirements with consistent, measurable criteria.
+
+Standards:
+- IEEE 830: Standard for Software Requirements Specifications
+- Gherkin: Behavior-Driven Development syntax (Given-When-Then)
+"""
+
+
 def analysis(text, context, language="es"):
+    """
+    Generate a prompt for analyzing and auditing software requirements.
+    
+    Creates a structured prompt that instructs the LLM to analyze a requirement
+    against IEEE 830 and Gherkin standards, identifying issues and suggesting improvements.
+    
+    Args:
+        text (str): The requirement statement to analyze.
+                   Example: "The system must be fast and secure"
+        context (str): Relevant context retrieved from the RAG vector store.
+                      Contains similar requirements or standards for comparison.
+        language (str, optional): Language for the response. Defaults to "es" (Spanish).
+    
+    Returns:
+        str: A formatted prompt ready to send to the LLM.
+    
+    Output Sections (included in prompt):
+        1. CLASSIFICATION: Identifies if requirement is Functional (RF) or Non-Functional (RNF)
+        2. CLARITY AND QUALITY: Evaluates how well-defined the requirement is
+        3. GHERKIN METRIC: Converts requirement to Given-When-Then format
+        4. RECOMMENDATION: Suggests improvements and reformulates the requirement
+    
+    Example:
+        >>> prompt = analysis("The system must handle 1000 users", "context...")
+        >>> # Prompt instructs LLM to classify, evaluate, and improve the requirement
+    """
     return f"""
 Eres un auditor experto en requisitos siguiendo estándares IEEE 830 y Gherkin.
 
@@ -28,7 +67,42 @@ Responde en formato de lista estructurada siguiendo IEEE 830:
    - Requisito reformulado con criterios de aceptación medibles
 """
 
+
 def generation(description, context, language="es"):
+    """
+    Generate a prompt for creating comprehensive software requirements.
+    
+    Creates a structured prompt that instructs the LLM to generate both functional
+    and non-functional requirements based on a description, following IEEE 830 and
+    Gherkin standards with measurable acceptance criteria.
+    
+    Args:
+        description (str): Description of what needs to be built.
+                          Example: "A user authentication system with two-factor authentication"
+        context (str): Relevant context from the RAG vector store.
+                      Contains similar requirements or best practices.
+        language (str, optional): Language for the response. Defaults to "es" (Spanish).
+    
+    Returns:
+        str: A formatted prompt ready to send to the LLM.
+    
+    Output Structure (included in prompt):
+        - FUNCTIONAL REQUIREMENTS (RF):
+          * ID, Title, Priority
+          * Description
+          * Gherkin Given-When-Then format
+          * Acceptance criteria (measurable)
+        
+        - NON-FUNCTIONAL REQUIREMENTS (RNF):
+          * ID, Category (Performance, Security, Usability, etc.)
+          * Priority
+          * Quantifiable specification with metrics
+          * SLA (Service Level Agreement) if applicable
+    
+    Example:
+        >>> prompt = generation("A payment system", "context...")
+        >>> # Prompt instructs LLM to generate detailed, structured requirements
+    """
     return f"""
 Eres un experto en ingeniería de requisitos con dominio de IEEE 830 y Gherkin.
 

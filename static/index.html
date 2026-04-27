@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<!--
+LLM Requirements Auditor - Web Frontend
+
+A responsive web interface for AI-powered software requirement analysis and generation.
+
+Features:
+- Three-tab interface for analysis, generation, and knowledge base management
+- Real-time loading indicators and error handling
+- RESTful API communication with FastAPI backend
+- Modern gradient styling and smooth animations
+
+Sections:
+1. HTML Markup (below)
+2. CSS Styles - Responsive design, animations, and component styling
+3. JavaScript - Event handlers, API communication, and state management
+
+Dependencies:
+- Requires running FastAPI backend at localhost:8000
+- Modern browser with ES6 support
+-->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -408,10 +428,44 @@
     </div>
 
     <script>
+        /**
+         * LLM Requirements Auditor - Frontend JavaScript
+         * 
+         * Handles:
+         * - Tab switching and navigation
+         * - Form submission and validation
+         * - API communication with FastAPI backend
+         * - UI state management (loading, errors, results)
+         * 
+         * API Endpoints:
+         * - POST /analyze - Audit a requirement
+         * - POST /generate - Generate requirements
+         * - POST /train - Add documents to knowledge base
+         */
+
+        // ========================================
+        // Configuration
+        // ========================================
+
+        /** Base URL for all API calls (determined from current window location) */
         const API_BASE = window.location.origin;
 
+        // ========================================
+        // Tab Management
+        // ========================================
+
+        /**
+         * Switch between application tabs (Analyze, Generate, Add)
+         * 
+         * Handles:
+         * - Hiding all tab content and buttons
+         * - Showing the selected tab
+         * - Updating active button styling
+         * 
+         * @param {string} tabName - ID of the tab to activate ("analyze", "generate", "add")
+         */
         function switchTab(tabName) {
-            // Ocultar todos los tabs
+            // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
@@ -419,15 +473,31 @@
                 btn.classList.remove('active');
             });
 
-            // Mostrar el tab seleccionado
+            // Show selected tab
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
         }
 
+        // ========================================
+        // Analyze Tab - API Handler
+        // ========================================
+
+        /**
+         * Handle requirement analysis form submission
+         * 
+         * Flow:
+         * 1. Validate input
+         * 2. Show loading indicator
+         * 3. Send POST request to /analyze endpoint
+         * 4. Display results or error
+         * 
+         * @param {Event} event - Form submission event
+         */
         async function handleAnalyze(event) {
             event.preventDefault();
             const text = document.getElementById('analyzeText').value.trim();
             
+            // Input validation
             if (!text) {
                 showAnalyzeError('Por favor ingresa un requisito para auditar');
                 return;
@@ -437,6 +507,7 @@
             hideAnalyzeError();
 
             try {
+                // Send analysis request to backend
                 const response = await fetch(`${API_BASE}/analyze`, {
                     method: 'POST',
                     headers: {
@@ -445,10 +516,12 @@
                     body: JSON.stringify({ text })
                 });
 
+                // Check for HTTP errors
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
 
+                // Parse JSON response and display results
                 const data = await response.json();
                 showAnalyzeResults(data);
             } catch (error) {
@@ -459,10 +532,26 @@
             }
         }
 
+        // ========================================
+        // Generate Tab - API Handler
+        // ========================================
+
+        /**
+         * Handle requirement generation form submission
+         * 
+         * Flow:
+         * 1. Validate input
+         * 2. Show loading indicator
+         * 3. Send POST request to /generate endpoint
+         * 4. Display generated requirements or error
+         * 
+         * @param {Event} event - Form submission event
+         */
         async function handleGenerate(event) {
             event.preventDefault();
             const description = document.getElementById('generateText').value.trim();
             
+            // Input validation
             if (!description) {
                 showGenerateError('Por favor describe lo que necesitas');
                 return;
@@ -494,6 +583,14 @@
             }
         }
 
+        // ========================================
+        // Results Display
+        // ========================================
+
+        /**
+         * Display analysis results in the UI
+         * @param {Object} data - Response from /analyze endpoint
+         */
         function showAnalyzeResults(data) {
             const resultsDiv = document.getElementById('analyzeResults');
             const resultsContent = document.getElementById('analyzeResultsContent');
@@ -501,6 +598,10 @@
             resultsDiv.classList.add('show');
         }
 
+        /**
+         * Display generated requirements in the UI
+         * @param {Object} data - Response from /generate endpoint
+         */
         function showGenerateResults(data) {
             const resultsDiv = document.getElementById('generateResults');
             const resultsContent = document.getElementById('generateResultsContent');
@@ -508,50 +609,152 @@
             resultsDiv.classList.add('show');
         }
 
+        /**
+         * Display added text confirmation
+         * @param {Object} data - Response from /train endpoint
+         */
+        function showAddResults(data) {
+            const resultsDiv = document.getElementById('addResults');
+            const resultsContent = document.getElementById('addResultsContent');
+            resultsContent.textContent = `Texto agregado exitosamente. Documentos procesados: ${data.processed_docs}`;
+            resultsDiv.classList.add('show');
+        }
+
+        // ========================================
+        // Loading Indicators
+        // ========================================
+
+        /**
+         * Toggle loading spinner for analyze tab
+         * @param {boolean} show - Whether to show the loading indicator
+         */
         function showAnalyzeLoading(show) {
             document.getElementById('analyzeLoading').classList.toggle('show', show);
         }
 
+        /**
+         * Toggle loading spinner for generate tab
+         * @param {boolean} show - Whether to show the loading indicator
+         */
         function showGenerateLoading(show) {
             document.getElementById('generateLoading').classList.toggle('show', show);
         }
 
+        /**
+         * Toggle loading spinner for add tab
+         * @param {boolean} show - Whether to show the loading indicator
+         */
+        function showAddLoading(show) {
+            document.getElementById('addLoading').classList.toggle('show', show);
+        }
+
+        // ========================================
+        // Error Handling
+        // ========================================
+
+        /**
+         * Display error message in analyze tab
+         * @param {string} message - Error message to display
+         */
         function showAnalyzeError(message) {
             const errorDiv = document.getElementById('analyzeError');
             errorDiv.textContent = message;
             errorDiv.classList.add('show');
         }
 
+        /**
+         * Display error message in generate tab
+         * @param {string} message - Error message to display
+         */
         function showGenerateError(message) {
             const errorDiv = document.getElementById('generateError');
             errorDiv.textContent = message;
             errorDiv.classList.add('show');
         }
 
+        /**
+         * Display error message in add tab
+         * @param {string} message - Error message to display
+         */
+        function showAddError(message) {
+            const errorDiv = document.getElementById('addError');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        /**
+         * Hide error message in analyze tab
+         */
         function hideAnalyzeError() {
             document.getElementById('analyzeError').classList.remove('show');
         }
 
+        /**
+         * Hide error message in generate tab
+         */
         function hideGenerateError() {
             document.getElementById('generateError').classList.remove('show');
         }
 
+        /**
+         * Hide error message in add tab
+         */
+        function hideAddError() {
+            document.getElementById('addError').classList.remove('show');
+        }
+
+        // ========================================
+        // Form Reset/Clear
+        // ========================================
+
+        /**
+         * Clear analyze form and results
+         */
         function clearAnalyze() {
             document.getElementById('analyzeText').value = '';
             document.getElementById('analyzeResults').classList.remove('show');
             hideAnalyzeError();
         }
 
+        /**
+         * Clear generate form and results
+         */
         function clearGenerate() {
             document.getElementById('generateText').value = '';
             document.getElementById('generateResults').classList.remove('show');
             hideGenerateError();
         }
 
+        /**
+         * Clear add form and results
+         */
+        function clearAdd() {
+            document.getElementById('addText').value = '';
+            document.getElementById('addResults').classList.remove('show');
+            hideAddError();
+        }
+
+        // ========================================
+        // Add Tab - Knowledge Base Management
+        // ========================================
+
+        /**
+         * Handle adding new documents to the knowledge base
+         * 
+         * Flow:
+         * 1. Validate input
+         * 2. Show loading indicator
+         * 3. Send POST request to /train endpoint
+         * 4. Documents are indexed with FAISS for semantic search
+         * 5. Display confirmation or error
+         * 
+         * @param {Event} event - Form submission event
+         */
         async function handleAdd(event) {
             event.preventDefault();
             const text = document.getElementById('addText').value.trim();
             
+            // Input validation
             if (!text) {
                 showAddError('Por favor ingresa texto para agregar');
                 return;
@@ -561,6 +764,7 @@
             hideAddError();
 
             try {
+                // Send training request to backend
                 const response = await fetch(`${API_BASE}/train`, {
                     method: 'POST',
                     headers: {
@@ -569,10 +773,12 @@
                     body: JSON.stringify({ docs: [text] })
                 });
 
+                // Check for HTTP errors
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
 
+                // Parse response and display success
                 const data = await response.json();
                 showAddResults(data);
             } catch (error) {
@@ -583,32 +789,9 @@
             }
         }
 
-        function showAddResults(data) {
-            const resultsDiv = document.getElementById('addResults');
-            const resultsContent = document.getElementById('addResultsContent');
-            resultsContent.textContent = `Texto agregado exitosamente. Documentos procesados: ${data.processed_docs}`;
-            resultsDiv.classList.add('show');
-        }
-
-        function showAddLoading(show) {
-            document.getElementById('addLoading').classList.toggle('show', show);
-        }
-
-        function showAddError(message) {
-            const errorDiv = document.getElementById('addError');
-            errorDiv.textContent = message;
-            errorDiv.classList.add('show');
-        }
-
-        function hideAddError() {
-            document.getElementById('addError').classList.remove('show');
-        }
-
-        function clearAdd() {
-            document.getElementById('addText').value = '';
-            document.getElementById('addResults').classList.remove('show');
-            hideAddError();
-        }
+        // ========================================
+        // End of JavaScript - All functions documented above
+        // ========================================
     </script>
 </body>
 </html>
