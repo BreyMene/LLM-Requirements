@@ -314,6 +314,9 @@
             <button class="tab-button" onclick="switchTab('generate')">
                 ✨ Generar Requisitos
             </button>
+            <button class="tab-button" onclick="switchTab('add')">
+                ➕ Agregar a Base de Datos
+            </button>
         </div>
 
         <!-- Tab: Análisis -->
@@ -369,6 +372,35 @@
                     <h3>✨ Requisitos Generados</h3>
                     <div class="results-content">
                         <pre id="generateResultsContent"></pre>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tab: Agregar -->
+        <div id="add" class="tab-content">
+            <form id="addForm" onsubmit="handleAdd(event)">
+                <div class="form-group">
+                    <label for="addText">Ingresa el texto para agregar a la base de datos:</label>
+                    <textarea id="addText" placeholder="Ej: Información adicional sobre requisitos..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">Agregar Texto</button>
+                    <button type="button" class="clear-button" onclick="clearAdd()">Limpiar</button>
+                </div>
+
+                <div id="addLoading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Agregando texto...</p>
+                </div>
+
+                <div id="addError" class="error"></div>
+
+                <div id="addResults" class="results">
+                    <h3>✅ Base de datos Actualizada</h3>
+                    <div class="results-content">
+                        <pre id="addResultsContent"></pre>
                     </div>
                 </div>
             </form>
@@ -514,6 +546,68 @@
             document.getElementById('generateText').value = '';
             document.getElementById('generateResults').classList.remove('show');
             hideGenerateError();
+        }
+
+        async function handleAdd(event) {
+            event.preventDefault();
+            const text = document.getElementById('addText').value.trim();
+            
+            if (!text) {
+                showAddError('Por favor ingresa texto para agregar');
+                return;
+            }
+
+            showAddLoading(true);
+            hideAddError();
+
+            try {
+                const response = await fetch(`${API_BASE}/train`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ docs: [text] })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                showAddResults(data);
+            } catch (error) {
+                showAddError(`Error en la solicitud: ${error.message}`);
+                console.error('Add error:', error);
+            } finally {
+                showAddLoading(false);
+            }
+        }
+
+        function showAddResults(data) {
+            const resultsDiv = document.getElementById('addResults');
+            const resultsContent = document.getElementById('addResultsContent');
+            resultsContent.textContent = `Texto agregado exitosamente. Documentos procesados: ${data.processed_docs}`;
+            resultsDiv.classList.add('show');
+        }
+
+        function showAddLoading(show) {
+            document.getElementById('addLoading').classList.toggle('show', show);
+        }
+
+        function showAddError(message) {
+            const errorDiv = document.getElementById('addError');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        function hideAddError() {
+            document.getElementById('addError').classList.remove('show');
+        }
+
+        function clearAdd() {
+            document.getElementById('addText').value = '';
+            document.getElementById('addResults').classList.remove('show');
+            hideAddError();
         }
     </script>
 </body>

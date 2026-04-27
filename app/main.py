@@ -18,11 +18,38 @@ def root():
 @app.post("/train")
 def train(data: dict):
     docs = data.get("docs", [])
+
     if not docs:
         raise HTTPException(status_code=400, detail="No docs provided")
-    
-    index_documents(docs)
-    return {"status": "ok", "docs_indexed": len(docs)}
+
+    # Limpieza
+    clean_docs = []
+    for d in docs:
+        if isinstance(d, str):
+            d = d.strip()
+            if len(d) > 5:
+                clean_docs.append(d)
+
+    if not clean_docs:
+        raise HTTPException(status_code=400, detail="No valid docs")
+
+    # Chunking
+    def chunk_text(text, size=200):
+        return [text[i:i+size] for i in range(0, len(text), size)]
+
+    final_docs = []
+    for doc in clean_docs:
+        chunks = chunk_text(doc)
+        final_docs.extend(chunks)
+
+    # Indexar
+    index_documents(final_docs)
+
+    return {
+        "status": "ok",
+        "original_docs": len(docs),
+        "processed_docs": len(final_docs)
+    }
 
 # ANALIZAR
 @app.post("/analyze")
