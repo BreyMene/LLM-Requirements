@@ -23,13 +23,15 @@ def index_documents(docs):
     Index new documents into the vector store for semantic search.
     
     This function:
-    1. Converts documents to embeddings using the sentence transformer
-    2. Adds embeddings and texts to the vector store (deduplicates automatically)
+    1. Converts document chunks to embeddings using the sentence transformer
+    2. Adds embeddings, texts, and metadata to the vector store
     3. Persists the updated index to disk
     
     Args:
-        docs (list): List of text documents to index.
-                    Documents should be meaningful text chunks (typically 100-500 tokens).
+        docs (list): List of text documents or document objects to index.
+                    Each item may be either a string or a dict with keys:
+                    - content: The text content
+                    - metadata: A JSON-serializable metadata object
     
     Returns:
         None: Modifies the vector store in-place and saves it to disk.
@@ -37,12 +39,22 @@ def index_documents(docs):
     Note:
         - Duplicate documents are automatically filtered out by VectorStore.add()
         - The operation is persistent - saved documents remain available after restart
-    
-    Example:
-        >>> index_documents(["API requirements for authentication", "Database schema design"])
     """
-    embeddings = embed(docs)
-    vector_store.add(embeddings, docs)
+    texts = []
+    metadatas = []
+
+    for item in docs:
+        if isinstance(item, dict):
+            content = item.get("content", "")
+            metadata = item.get("metadata", {})
+            texts.append(content)
+            metadatas.append(metadata)
+        else:
+            texts.append(str(item))
+            metadatas.append({})
+
+    embeddings = embed(texts)
+    vector_store.add(embeddings, texts, metadatas)
     vector_store.save()
 
 

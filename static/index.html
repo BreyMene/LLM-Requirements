@@ -328,13 +328,13 @@ Dependencies:
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab('analyze')">
+            <button class="tab-button active" onclick="switchTab(event, 'analyze')">
                 📋 Análisis de Requisitos
             </button>
-            <button class="tab-button" onclick="switchTab('generate')">
+            <button class="tab-button" onclick="switchTab(event, 'generate')">
                 ✨ Generar Requisitos
             </button>
-            <button class="tab-button" onclick="switchTab('add')">
+            <button class="tab-button" onclick="switchTab(event, 'add')">
                 ➕ Agregar a Base de Datos
             </button>
         </div>
@@ -401,18 +401,38 @@ Dependencies:
         <div id="add" class="tab-content">
             <form id="addForm" onsubmit="handleAdd(event)">
                 <div class="form-group">
-                    <label for="addText">Ingresa el texto para agregar a la base de datos:</label>
-                    <textarea id="addText" placeholder="Ej: Información adicional sobre requisitos..." required></textarea>
+                    <label for="documentSource">Selecciona un PDF o Markdown (opcional):</label>
+                    <input id="documentSource" type="file" accept=".pdf,.md,.markdown,.txt">
+                </div>
+
+                <div class="form-group">
+                    <label for="addText">O ingresa texto para agregar a la base de datos:</label>
+                    <textarea id="addText" placeholder="Ej: Información adicional sobre requisitos..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateCreated">Fecha de creación:</label>
+                    <input id="dateCreated" type="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="summaryText">¿De qué trata el documento?</label>
+                    <textarea id="summaryText" placeholder="Resumen breve del documento"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notesText">Notas adicionales para el modelo:</label>
+                    <textarea id="notesText" placeholder="Información importante que el modelo debe conocer"></textarea>
                 </div>
 
                 <div class="button-group">
-                    <button type="submit">Agregar Texto</button>
+                    <button type="submit">Agregar Documento</button>
                     <button type="button" class="clear-button" onclick="clearAdd()">Limpiar</button>
                 </div>
 
                 <div id="addLoading" class="loading">
                     <div class="spinner"></div>
-                    <p>Agregando texto...</p>
+                    <p>Agregando documento...</p>
                 </div>
 
                 <div id="addError" class="error"></div>
@@ -464,7 +484,7 @@ Dependencies:
          * 
          * @param {string} tabName - ID of the tab to activate ("analyze", "generate", "add")
          */
-        function switchTab(tabName) {
+        function switchTab(event, tabName) {
             // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
@@ -475,7 +495,7 @@ Dependencies:
 
             // Show selected tab
             document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
+            event.currentTarget.classList.add('active');
         }
 
         // ========================================
@@ -616,7 +636,10 @@ Dependencies:
         function showAddResults(data) {
             const resultsDiv = document.getElementById('addResults');
             const resultsContent = document.getElementById('addResultsContent');
-            resultsContent.textContent = `Texto agregado exitosamente. Documentos procesados: ${data.processed_docs}`;
+            const message = data.chunks_indexed
+                ? `Documento agregado: ${data.source_file || 'texto directo'}. Fragmentos indexados: ${data.chunks_indexed}`
+                : `Texto agregado exitosamente. Documentos procesados: ${data.processed_docs}`;
+            resultsContent.textContent = `${message}\n${JSON.stringify(data.metadata || data, null, 2)}`;
             resultsDiv.classList.add('show');
         }
 
@@ -730,6 +753,10 @@ Dependencies:
          */
         function clearAdd() {
             document.getElementById('addText').value = '';
+            document.getElementById('documentSource').value = null;
+            document.getElementById('dateCreated').value = '';
+            document.getElementById('summaryText').value = '';
+            document.getElementById('notesText').value = '';
             document.getElementById('addResults').classList.remove('show');
             hideAddError();
         }
@@ -752,11 +779,15 @@ Dependencies:
          */
         async function handleAdd(event) {
             event.preventDefault();
+            const fileInput = document.getElementById('documentSource');
             const text = document.getElementById('addText').value.trim();
-            
-            // Input validation
-            if (!text) {
-                showAddError('Por favor ingresa texto para agregar');
+            const dateCreated = document.getElementById('dateCreated').value;
+            const summary = document.getElementById('summaryText').value.trim();
+            const notes = document.getElementById('notesText').value.trim();
+            const file = fileInput.files[0];
+
+            if (!file && !text) {
+                showAddError('Por favor ingresa texto o selecciona un archivo para agregar');
                 return;
             }
 
@@ -764,21 +795,41 @@ Dependencies:
             hideAddError();
 
             try {
-                // Send training request to backend
-                const response = await fetch(`${API_BASE}/train`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ docs: [text] })
-                });
+                let response;
+                if (file) {
+                    const formData = new FormData();
+                    formData.append('file', file);
+                    formData.append('date_created', dateCreated);
+                    formData.append('summary', summary);
+                    formData.append('notes', notes);
 
-                // Check for HTTP errors
-                if (!response.ok) {
-                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                    response = await fetch(`${API_BASE}/train-file`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                } else {
+                    response = await fetch(`${API_BASE}/train`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            docs: [{
+                                content: text,
+                                date_created: dateCreated,
+                                summary,
+                                notes
+                            }]
+                        })
+                    });
                 }
 
-                // Parse response and display success
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => null);
+                    const errorMessage = errorData?.detail || response.statusText;
+                    throw new Error(`Error ${response.status}: ${errorMessage}`);
+                }
+
                 const data = await response.json();
                 showAddResults(data);
             } catch (error) {

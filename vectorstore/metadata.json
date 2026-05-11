@@ -1,0 +1,3378 @@
+[
+  {
+    "text": "Un requisito debe ser claro",
+    "metadata": {}
+  },
+  {
+    "text": "Debe ser medible",
+    "metadata": {}
+  },
+  {
+    "text": "No debe ser ambiguo",
+    "metadata": {}
+  },
+  {
+    "text": "IEEE 830 establece que los requisitos deben ser correctos, no ambiguos, completos, consistentes, verificables y trazables\nISO 29148 indica que los requisitos deben ser necesarios, implementables y ver",
+    "metadata": {}
+  },
+  {
+    "text": "ificables\nUn requisito correcto refleja una necesidad real del usuario\nUn requisito consistente no entra en conflicto con otros requisitos\nUn requisito completo incluye todas las condiciones necesaria",
+    "metadata": {}
+  },
+  {
+    "text": "s\nUn requisito verificable puede ser probado mediante criterios objetivos",
+    "metadata": {}
+  },
+  {
+    "text": "Ejemplo de requisito ambiguo: El sistema debe ser rápido\nEjemplo de requisito corregido: El sistema debe responder en menos de 2 segundos para el 95% de las solicitudes",
+    "metadata": {}
+  },
+  {
+    "text": "Guía rápida\nde buenas\nprácticasGherkin:\nGUÍA RÁPIDA DE\nBUENAS PRÁCTICAS\nQUALTIO BOOKSGHERKIN\nCopyright ©, qualtio, 2023\nQUALTIO BOOKS\nCopyright ©, qualtio, 2023\nAll rights reserved. No parts of this b",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 1,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ht ©, qualtio, 2023\nQUALTIO BOOKS\nCopyright ©, qualtio, 2023\nAll rights reserved. No parts of this book may be copied, distributed, or\npublished in any form without permission from the publisher.  For",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 2,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ook may be copied, distributed, or\npublished in any form without permission from the publisher.  For permissions\ncontact: info@qualt.ioPublished by\nQUALTIO SOLUCIONES DIGITALES SLU\nB88526074\nContact:",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 3,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "permissions\ncontact: info@qualt.ioPublished by\nQUALTIO SOLUCIONES DIGITALES SLU\nB88526074\nContact: info@qualt.io\nhttps://qualt.io/\nCopyright ©, qualtio, 2023\nContenido\n04 Gherkin: Guía rápida de buen",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 4,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "info@qualt.io\nhttps://qualt.io/\nCopyright ©, qualtio, 2023\nContenido\n04 Gherkin: Guía rápida de buenas prácticas\n¿Qué es BDD?\nPrincipios de BDD\nBeneficios\nFeatures vs Historias\n¿Qué es Gherkin?\nSintax",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 5,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "as prácticas\n¿Qué es BDD?\nPrincipios de BDD\nBeneficios\nFeatures vs Historias\n¿Qué es Gherkin?\nSintaxis y estructura de una feature\nEscritura tradicional vs Gherkin\nReglas de estilo\nBuenas prácticas en",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 6,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "is y estructura de una feature\nEscritura tradicional vs Gherkin\nReglas de estilo\nBuenas prácticas en Gherkin\nEtiquetado\nCobertura\nAutomatización\nEjemplo de mal uso de Gherkin\nReescritura de ese mismo",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 7,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Gherkin\nEtiquetado\nCobertura\nAutomatización\nEjemplo de mal uso de Gherkin\nReescritura de ese mismo escenario correctamente\nEspecificaciones entendibles, mantenibles y automatizables\nEntendibles\nMante",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 8,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "escenario correctamente\nEspecificaciones entendibles, mantenibles y automatizables\nEntendibles\nMantenibles\nAutomatizables6\n8\n9\n10\n11\n12\n14\n16\n17\n18\n18\n19\n20\n20\n21\n21\n22\n24\n“BDD es una metodología agil",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 9,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "nibles\nAutomatizables6\n8\n9\n10\n11\n12\n14\n16\n17\n18\n18\n19\n20\n20\n21\n21\n22\n24\n“BDD es una metodología agilística de segunda\ngeneración,\nexterna, basada en múltiples partes interesadas,\nmúltiples\nescalas y a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 10,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ística de segunda\ngeneración,\nexterna, basada en múltiples partes interesadas,\nmúltiples\nescalas y alta automatización.\nDescribe un ciclo de iteraciones con entregas\nbien definidas,\nproporcionando un",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 11,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lta automatización.\nDescribe un ciclo de iteraciones con entregas\nbien definidas,\nproporcionando un software funcional y de alta\ncalidad.”\n“BDD trata sobre implementar una aplicación\ndescribiendo su c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 12,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "software funcional y de alta\ncalidad.”\n“BDD trata sobre implementar una aplicación\ndescribiendo su comportamiento desde la\nperspectiva de sus stakeholders.”- Dan North\n- Dan North\n¿Qué es BDD?\nBehavio",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 13,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "omportamiento desde la\nperspectiva de sus stakeholders.”- Dan North\n- Dan North\n¿Qué es BDD?\nBehavior-Driven-Development es un conjunto de práct icas de ingeniería de software\ndiseñado con el fin de a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 14,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "r-Driven-Development es un conjunto de práct icas de ingeniería de software\ndiseñado con el fin de ayudar a los equipos a crear  y entregar software con más valor,\nmayor calidad y en un tiempo más ráp",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 15,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "yudar a los equipos a crear  y entregar software con más valor,\nmayor calidad y en un tiempo más rápido.\nSe basa en prácticas de Agile y Lean que incluyen e l desarrollo guiado por pruebas\n(TDD) y el",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 16,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ido.\nSe basa en prácticas de Agile y Lean que incluyen e l desarrollo guiado por pruebas\n(TDD) y el Diseño Dirigido por Dominio (DDD). Pero el aspecto más importante de BDD\nes la búsqueda de un lengua",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 17,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Diseño Dirigido por Dominio (DDD). Pero el aspecto más importante de BDD\nes la búsqueda de un lenguaje común, con oraciones simples y estructuradas que\nfacilitan la comunicación entre las distintas pa",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 18,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "je común, con oraciones simples y estructuradas que\nfacilitan la comunicación entre las distintas parte s del proyecto: miembros del equipo\ntécnico y las partes interesadas de negocio.\n06 Gherkin: Guí",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 19,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rte s del proyecto: miembros del equipo\ntécnico y las partes interesadas de negocio.\n06 Gherkin: Guía rápida de buenas prácticas\nBDD trata de identificar el comportamiento deseado de un requerimiento,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 20,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "a rápida de buenas prácticas\nBDD trata de identificar el comportamiento deseado de un requerimiento, que se\nconocerá con el nombre de Feature. De tal manera qu e acaban sirviendo como\nrequisitos/crite",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 21,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "que se\nconocerá con el nombre de Feature. De tal manera qu e acaban sirviendo como\nrequisitos/criterios de aceptación del producto en la fase previa de desarrollo y sus\ncasos de prueba en la fase pos",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 22,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rios de aceptación del producto en la fase previa de desarrollo y sus\ncasos de prueba en la fase posterior al desarrollo.  Para ello, se apoya en lenguajes\ncomo Gherkin, uno de los más populares, que",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 23,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "terior al desarrollo.  Para ello, se apoya en lenguajes\ncomo Gherkin, uno de los más populares, que nos fac ilita la escritura de\nespecificaciones formales de comportamiento utiliza ndo sentencias com",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 24,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "nos fac ilita la escritura de\nespecificaciones formales de comportamiento utiliza ndo sentencias como “Given-\nWhen-Then”. Además, con la ayuda de herramientas de  automatización, estas\nespecificacione",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 25,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o “Given-\nWhen-Then”. Además, con la ayuda de herramientas de  automatización, estas\nespecificaciones pueden convertirse fácilmente en c asos de prueba automatizados.\nDDD\nTDD BDDHybrid\nPractice\nAutoma",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 26,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s pueden convertirse fácilmente en c asos de prueba automatizados.\nDDD\nTDD BDDHybrid\nPractice\nAutomation\nTest-firstCollaboration\nBusiness focusExperimentation\nIterative design\n07 Gherkin: Guía rápida",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 27,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tion\nTest-firstCollaboration\nBusiness focusExperimentation\nIterative design\n07 Gherkin: Guía rápida de buenas prácticas\nPrincipios de BDD\n-   Especificación enfocada a entrega de valor.\n-   Enfoque en",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 28,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "de buenas prácticas\nPrincipios de BDD\n-   Especificación enfocada a entrega de valor.\n-   Enfoque en el comportamiento.\n-   Refinamiento del proceso Agile, no una revisión .\n-   Cambio de paradigma.\n0",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 29,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "el comportamiento.\n-   Refinamiento del proceso Agile, no una revisión .\n-   Cambio de paradigma.\n08 Gherkin: Guía rápida de buenas prácticas\n-   Cuando alguien dice \"BDD\", inmediatamente\npiensa en \"",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 30,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "8 Gherkin: Guía rápida de buenas prácticas\n-   Cuando alguien dice \"BDD\", inmediatamente\npiensa en \"Given-When-Then\".\n-   Los escenarios de comportamiento son la pied ra\nangular de BDD.\n-   Formaliza",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 31,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Given-When-Then\".\n-   Los escenarios de comportamiento son la pied ra\nangular de BDD.\n-   Formaliza los criterios de aceptación y la\ncobertura de las pruebas.\n-   Los comportamientos se convierten en",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 32,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "los criterios de aceptación y la\ncobertura de las pruebas.\n-   Los comportamientos se convierten en el foco\nprincipal del equipo.\nGracias a estos beneficios se deduce que hay una reducción  de desperd",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 33,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "el foco\nprincipal del equipo.\nGracias a estos beneficios se deduce que hay una reducción  de desperdicios a la\nhora de que el equipo no gaste tiempo y esfuerzo en com portamientos o\nespecificaciones d",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 34,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "icios a la\nhora de que el equipo no gaste tiempo y esfuerzo en com portamientos o\nespecificaciones del producto que no aporten valor al negoc io, además de agilizar\nla generación de cambios, ya que es",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 35,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "el producto que no aporten valor al negoc io, además de agilizar\nla generación de cambios, ya que estos pueden darse de man era temprana y por\ndiferentes miembros del equipo.\nComo consecuencia directa",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 36,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tos pueden darse de man era temprana y por\ndiferentes miembros del equipo.\nComo consecuencia directa, tenemos la reducción de costes,  ya que se reducen los\ntiempos de entrega de un producto viable pa",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 37,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": ", tenemos la reducción de costes,  ya que se reducen los\ntiempos de entrega de un producto viable para los usuarios y de mejor calidad, lo\nque ayuda en la reducción de la cantidad de errores y por tan",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 38,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ra los usuarios y de mejor calidad, lo\nque ayuda en la reducción de la cantidad de errores y por tan to el coste de\ncorregirlos y el retraso que estos errores causarían.\nBDD facilita el cambio o ampli",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 39,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "to el coste de\ncorregirlos y el retraso que estos errores causarían.\nBDD facilita el cambio o ampliación en las especificaciones o c omportamientos, pero\nademás como la documentación está viva, ayuda",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 40,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ación en las especificaciones o c omportamientos, pero\nademás como la documentación está viva, ayuda a que todas las partes\ninteresadas puedan comprender fácilmente lo que hace la aplic ación. Y el co",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 41,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "a que todas las partes\ninteresadas puedan comprender fácilmente lo que hace la aplic ación. Y el conjunto\nintegral de pruebas derivadas de ello contribuye a reducir los r iesgos causados por\nnuevos c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 42,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "njunto\nintegral de pruebas derivadas de ello contribuye a reducir los r iesgos causados por\nnuevos cambios.\nAdemás gracias a la facilidad de automatización de las pruebas s e pueden acelerar\nconsidera",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 43,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ambios.\nAdemás gracias a la facilidad de automatización de las pruebas s e pueden acelerar\nconsiderablemente los ciclos de puesta en producción. Este t ipo de pruebas de\naceptación se pueden utilizar",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 44,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "blemente los ciclos de puesta en producción. Este t ipo de pruebas de\naceptación se pueden utilizar como punto de partida, evitando  así las largas sesiones\nde pruebas manuales antes de cada puesta en",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 45,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "como punto de partida, evitando  así las largas sesiones\nde pruebas manuales antes de cada puesta en producción e invirtiendo ese tiempo\nde manera más productiva y eficiente en pruebas explorato rias",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 46,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "producción e invirtiendo ese tiempo\nde manera más productiva y eficiente en pruebas explorato rias u otro tipo de\npruebas manuales no triviales.\nBeneficios\n09 Gherkin: Guía rápida de buenas prácticas",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 47,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "u otro tipo de\npruebas manuales no triviales.\nBeneficios\n09 Gherkin: Guía rápida de buenas prácticas\nBDD mejora el proceso de desarrollo de diversas man eras:\nTrabajo en  equipo :  Cualquier  miembro",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 48,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "BDD mejora el proceso de desarrollo de diversas man eras:\nTrabajo en  equipo :  Cualquier  miembro  del  equipo  puede  escribir  los\nescenarios de BDD. (Reuniones The Three Amigos)\nClaridad : los  e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 49,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "del  equipo  puede  escribir  los\nescenarios de BDD. (Reuniones The Three Amigos)\nClaridad : los  escenarios  se  centran  específicamente  en  el\ncomportamiento esperado  del  producto  en  desarrol",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 50,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "scenarios  se  centran  específicamente  en  el\ncomportamiento esperado  del  producto  en  desarrollo,  lo  que  resulta\nen menos ambigüedad sobre qué desarrollar.\nSimplicidad : Requerimientos = Crit",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 51,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lo,  lo  que  resulta\nen menos ambigüedad sobre qué desarrollar.\nSimplicidad : Requerimientos = Criterios de Aceptación = Test cases. Lo\nque también facilita la aceleración de la automatización.\nTesti",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 52,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "erios de Aceptación = Test cases. Lo\nque también facilita la aceleración de la automatización.\nTesting desde  el  principio  (Shift-left) :  La  definición  de  los  casos  de\nprueba se convierte inhe",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 53,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ng desde  el  principio  (Shift-left) :  La  definición  de  los  casos  de\nprueba se convierte inherentemente en parte de la prepa ración.\nArtefactos : Los  escenarios  forman  una  colección  de  ca",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 54,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rentemente en parte de la prepa ración.\nArtefactos : Los  escenarios  forman  una  colección  de  casos  de\nprueba. Cualquier  prueba  no  automatizada  se  puede  agrega r  a  un\ntrabajo pendiente de",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 55,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "sos  de\nprueba. Cualquier  prueba  no  automatizada  se  puede  agrega r  a  un\ntrabajo pendiente de automatización conocido.\nAutomatización : Los marcos BDD facilitan  la  conversión  de  escenarios",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 56,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "automatización conocido.\nAutomatización : Los marcos BDD facilitan  la  conversión  de  escenarios\nen pruebas automatizadas.\nTest-Driven : La  mayoría  de  los  marcos  BDD  pueden  ejecutar\nescenari",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 57,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "en pruebas automatizadas.\nTest-Driven : La  mayoría  de  los  marcos  BDD  pueden  ejecutar\nescenarios para fallar hasta que se implemente la función.\nReutilización de  código :  Los  pasos  \"Given-Wh",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 58,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "os para fallar hasta que se implemente la función.\nReutilización de  código :  Los  pasos  \"Given-When-Then\"  se  pueden\nreutilizar entre escenarios.\nParametrización : Los  pasos  se  pueden  parametr",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 59,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "en-Then\"  se  pueden\nreutilizar entre escenarios.\nParametrización : Los  pasos  se  pueden  parametrizar  e  incluso  se\npueden utilizar  tablas  de  ejemplo  que  facilitan  la  ejecución  del\nmismo",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 60,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "izar  e  incluso  se\npueden utilizar  tablas  de  ejemplo  que  facilitan  la  ejecución  del\nmismo escenario con diferentes combinaciones de entradas\nAdaptabilidad : Los  escenarios  son  fáciles  de",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 61,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "escenario con diferentes combinaciones de entradas\nAdaptabilidad : Los  escenarios  son  fáciles  de  reescribir  a  medida  que\ncambian los productos y las funciones.\n10 Gherkin: Guía rápida de buena",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 62,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "reescribir  a  medida  que\ncambian los productos y las funciones.\n10 Gherkin: Guía rápida de buenas prácticas\nFeatures vs HistoriasSegún John Ferguson Smart, las historias de usuario  se parecen muc",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 63,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s prácticas\nFeatures vs HistoriasSegún John Ferguson Smart, las historias de usuario  se parecen mucho a las\nFeatures. Una historia de usuario no tiene que ser un entregable de forma aislada,\npero sí",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 64,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ho a las\nFeatures. Una historia de usuario no tiene que ser un entregable de forma aislada,\npero sí que puede centrarse en un aspecto en partic ular de una Feature. Las\nhistorias de usuario pueden ayu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 65,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "que puede centrarse en un aspecto en partic ular de una Feature. Las\nhistorias de usuario pueden ayudar a planificar y o rganizar cómo se va a construir\nuna Feature.\nEn muchos proyectos, las Features",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 66,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "dar a planificar y o rganizar cómo se va a construir\nuna Feature.\nEn muchos proyectos, las Features estarían represen tadas como historias de\nusuario de más alto nivel, y a algunos equipos no l es res",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 67,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "estarían represen tadas como historias de\nusuario de más alto nivel, y a algunos equipos no l es resulta necesario romper\ncada Feature en historias más pequeñas. Esto está b ien y funciona bien en\npro",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 68,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ulta necesario romper\ncada Feature en historias más pequeñas. Esto está b ien y funciona bien en\nproyectos más pequeños como dice Ferguson.\nLas historias de usuario están planeadas esencialme nte como",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 69,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "yectos más pequeños como dice Ferguson.\nLas historias de usuario están planeadas esencialme nte como artefactos. Son\nuna buena forma de organizar el trabajo que hay que  hacer para ofrecer una\nfunción",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 70,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "artefactos. Son\nuna buena forma de organizar el trabajo que hay que  hacer para ofrecer una\nfunción o necesidad, pero al usuario final no le im porta la forma de organizar las\ncosas para conseguir la",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 71,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o necesidad, pero al usuario final no le im porta la forma de organizar las\ncosas para conseguir la Feature con tal de que esta  se entregue.\nUna vez que la Feature ha sido implementada, las hi stori",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 72,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Feature con tal de que esta  se entregue.\nUna vez que la Feature ha sido implementada, las hi storias de usuario pueden\ndarse por terminadas.\nUna Feature  es una funcionalidad del software que se\nent",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 73,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "as de usuario pueden\ndarse por terminadas.\nUna Feature  es una funcionalidad del software que se\nentrega a los usuarios finales o a otras partes interesadas\nque la necesitan para alcanzar los objetivo",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 74,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rega a los usuarios finales o a otras partes interesadas\nque la necesitan para alcanzar los objetivos de negocio.\nUna historia  de usuario es una herramienta de\nplanificación que ayuda a profundizar e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 75,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s de negocio.\nUna historia  de usuario es una herramienta de\nplanificación que ayuda a profundizar en los detalles de lo\nque se necesita para ofrecer una característica particular.\n¿Qué es Gherkin?\nEs",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 76,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n los detalles de lo\nque se necesita para ofrecer una característica particular.\n¿Qué es Gherkin?\nEs uno de los lenguajes más populares para escribir  especificaciones formales de\ncomportamiento, sin",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 77,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "uno de los lenguajes más populares para escribir  especificaciones formales de\ncomportamiento, sin entrar en el detalle técnico de  la implementación.\nTécnicamente es un Lenguaje de Dominio Específic",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 78,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "entrar en el detalle técnico de  la implementación.\nTécnicamente es un Lenguaje de Dominio Específico ( DSL) muy cercano al lenguaje natural.\nGracias al lenguaje Gherkin, se dispone de una senc illa m",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 79,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o ( DSL) muy cercano al lenguaje natural.\nGracias al lenguaje Gherkin, se dispone de una senc illa manera de escribir cómo debe\ncomportarse una funcionalidad a implementar, valida r y testear, fácil d",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 80,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "anera de escribir cómo debe\ncomportarse una funcionalidad a implementar, valida r y testear, fácil de entender para todas\nlas partes: técnicos y negocio.  Además facilita la  automatización de pruebas",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 81,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "e entender para todas\nlas partes: técnicos y negocio.  Además facilita la  automatización de pruebas ya que estas\nespecificaciones pueden reutilizarse como pruebas e jecutables y entendidas por todos.",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 82,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ya que estas\nespecificaciones pueden reutilizarse como pruebas e jecutables y entendidas por todos. Ayuda\na que la documentación permanezca viva y tiene sopo rte para más de 60 idiomas.\n11 Gherkin: G",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 83,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Ayuda\na que la documentación permanezca viva y tiene sopo rte para más de 60 idiomas.\n11 Gherkin: Guía rápida de buenas prácticas\nSintaxis y estructura  de una feture\nGherkin hace uso de varias palab",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 84,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "uía rápida de buenas prácticas\nSintaxis y estructura  de una feture\nGherkin hace uso de varias palabras reservadas:\nFeature Scenario Given When\nThenAnd\nBut Scenario Outline Examples Background\n12 Gher",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 85,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ras reservadas:\nFeature Scenario Given When\nThenAnd\nBut Scenario Outline Examples Background\n12 Gherkin: Guía rápida de buenas prácticas\nDescripción del comportamiento o funcionalidad que se requiere",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 86,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "kin: Guía rápida de buenas prácticas\nDescripción del comportamiento o funcionalidad que se requiere .\nLa narrativa de la historia es texto libreFeature\nScenario Alcance del comportamiento\nGiven\nEstabl",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 87,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": ".\nLa narrativa de la historia es texto libreFeature\nScenario Alcance del comportamiento\nGiven\nEstablece el estado inicial o pre condición que puede ir\nacompañado de otras palabras como And o But\nWhen",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 88,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ece el estado inicial o pre condición que puede ir\nacompañado de otras palabras como And o But\nWhen\nThen\nRealiza la acción o el evento, puede ir acompañado de otras\npalabras como And o But\nVerifica lo",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 89,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Then\nRealiza la acción o el evento, puede ir acompañado de otras\npalabras como And o But\nVerifica los resultados, puede ir acompañado de otras palabra s\ncomo And o But\nAnd/But\nConectores para una escr",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 90,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s resultados, puede ir acompañado de otras palabra s\ncomo And o But\nAnd/But\nConectores para una escritura de frases más natural\nBackground\nPermite añadir cierto contexto a los escenarios y para ev ita",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 91,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "itura de frases más natural\nBackground\nPermite añadir cierto contexto a los escenarios y para ev itar la\nrepetición del mismo Given en los escenarios de una misma Fea ture.\nEste escenario se ejecuta s",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 92,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "r la\nrepetición del mismo Given en los escenarios de una misma Fea ture.\nEste escenario se ejecuta siempre antes de cada escenar io\nScenario Outline\nEjecuta un mismo escenario varias veces con diferen",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 93,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "iempre antes de cada escenar io\nScenario Outline\nEjecuta un mismo escenario varias veces con diferentes\ncombinaciones de valores\n13 Gherkin: Guía rápida de buenas prácticas\nA continuación se indican a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 94,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tes\ncombinaciones de valores\n13 Gherkin: Guía rápida de buenas prácticas\nA continuación se indican algunas recomendaciones a  seguir a la hora de escribir\nfeatures en Gherkin:\nLas features de Gherkin",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 95,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lgunas recomendaciones a  seguir a la hora de escribir\nfeatures en Gherkin:\nLas features de Gherkin deben probar partes y\nno la aplicación al completo.\nExpresados en el mismo lenguaje que use\nnegocio.",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 96,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "deben probar partes y\nno la aplicación al completo.\nExpresados en el mismo lenguaje que use\nnegocio.\nEstablecer una buena organización de las\nfeatures.\nLos escenarios deben ser lo más\nindependientes p",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 97,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Establecer una buena organización de las\nfeatures.\nLos escenarios deben ser lo más\nindependientes posible.\nGiven I open a browser\nAnd I navigate to \"http://example.com/login\"\nWhen I type in the usern",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 98,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "osible.\nGiven I open a browser\nAnd I navigate to \"http://example.com/login\"\nWhen I type in the username filed \"bob97\"\nAnd I type in the password field \"F1d0\"\nAnd I click on Submit button\nThen I should",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 99,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ame filed \"bob97\"\nAnd I type in the password field \"F1d0\"\nAnd I click on Submit button\nThen I should see the message \"Welcome Back\nBob\"\nGiven I am on the Login Page\nWhen I Iog in with correct credenti",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 100,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "see the message \"Welcome Back\nBob\"\nGiven I am on the Login Page\nWhen I Iog in with correct credentials \"bob97\"\nand \"F1d0\"\nThen I should see a welcome messageModo imperativo Modo declarativo\nEscritura",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 101,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "als \"bob97\"\nand \"F1d0\"\nThen I should see a welcome messageModo imperativo Modo declarativo\nEscritura tradicional vs GherkinUno de los mayores errores que pueden cometerse a la ho ra de\nescribir especi",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 102,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tradicional vs GherkinUno de los mayores errores que pueden cometerse a la ho ra de\nescribir especificaciones con Gherkin, es no hacerlo con u na\nmentalidad enfocada al comportamiento, escribiendo pr",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 103,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ficaciones con Gherkin, es no hacerlo con u na\nmentalidad enfocada al comportamiento, escribiendo pruebas\nfuncionales basadas en procedimientos “tradicionales”: Instru cciones\npaso a paso con acciones",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 104,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "uebas\nfuncionales basadas en procedimientos “tradicionales”: Instru cciones\npaso a paso con acciones y resultados esperados. Este t ipo de\npruebas muchas veces son imperativas y crean flujos a través",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 105,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "y resultados esperados. Este t ipo de\npruebas muchas veces son imperativas y crean flujos a través del\nsistema que cubren múltiples comportamientos, resultando s er\ninnecesariamente largos, de costos",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 106,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "del\nsistema que cubren múltiples comportamientos, resultando s er\ninnecesariamente largos, de costoso mantenimientos y conf usos.\nVéase un ejemplo. Considerar una prueba que busca imáge nes de\ngalleta",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 107,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o mantenimientos y conf usos.\nVéase un ejemplo. Considerar una prueba que busca imáge nes de\ngalletas en Google:\nAbra un navegador web.\nNavegue a https://www.google.com/.\nIngrese \"galletas\" en la barr",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 108,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s en Google:\nAbra un navegador web.\nNavegue a https://www.google.com/.\nIngrese \"galletas\" en la barra de búsqueda.\nHaga clic en el enlace \"Imágenes\" en la parte superior de la\npágina de resultados.El",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 109,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "a de búsqueda.\nHaga clic en el enlace \"Imágenes\" en la parte superior de la\npágina de resultados.El navegador web se abre correctamente.\nLa página web se carga correctamente y la imagen de Google está",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 110,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "navegador web se abre correctamente.\nLa página web se carga correctamente y la imagen de Google está\nvisible.\nLos enlaces relacionados con \"panda\" se muestran en la página de\nresultados.\nLas imágenes",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 111,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "visible.\nLos enlaces relacionados con \"panda\" se muestran en la página de\nresultados.\nLas imágenes relacionadas con “galletas” se muestran en la\npágina de resultados.\nUn error común al traducir este",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 112,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "relacionadas con “galletas” se muestran en la\npágina de resultados.\nUn error común al traducir este ejemplo a Gherkin sería e l siguiente:\nEste escenario no está enfocado al comportamiento, simple men",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 113,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ejemplo a Gherkin sería e l siguiente:\nEste escenario no está enfocado al comportamiento, simple mente se\nhan añadido las palabras clave delante de cada paso de una pru eba\ntradicional.\n14 Gherkin: Gu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 114,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "te se\nhan añadido las palabras clave delante de cada paso de una pru eba\ntradicional.\n14 Gherkin: Guía rápida de buenas prácticas\n# BAD EXAMPLE! Do not copy.\nFeature : Búsqueda en Google\nScenario : Bú",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 115,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ía rápida de buenas prácticas\n# BAD EXAMPLE! Do not copy.\nFeature : Búsqueda en Google\nScenario : Búsqueda de imágenes en Google\nGiven  el usuario abre el navegador\nAnd el usuario navega a \"https://ww",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 116,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "squeda de imágenes en Google\nGiven  el usuario abre el navegador\nAnd el usuario navega a \"https://www.google.com/\"\nWhen  el usuario introduce \"galletas\"  en la barra del buscador\nThen  los enlaces rel",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 117,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "w.google.com/\"\nWhen  el usuario introduce \"galletas\"  en la barra del buscador\nThen  los enlaces relacionados con \"galletas\"  se muestran en la página\nde resultados\nWhen  el usuario hace click en el l",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 118,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "acionados con \"galletas\"  se muestran en la página\nde resultados\nWhen  el usuario hace click en el link \"Imagenes\"  en la parte superior\nde la página de resultados\nThen  las imágenes relacionadas con",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 119,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ink \"Imagenes\"  en la parte superior\nde la página de resultados\nThen  las imágenes relacionadas con \"galletas\"  se muestran en la página\nde resultados\n15 Gherkin: Guía rápida de buenas prácticas\nLos p",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 120,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "\"galletas\"  se muestran en la página\nde resultados\n15 Gherkin: Guía rápida de buenas prácticas\nLos primeros pasos no están centrados en el comportamie nto, simplemente van a\nGoogle y pueden ser presci",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 121,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rimeros pasos no están centrados en el comportamie nto, simplemente van a\nGoogle y pueden ser prescindibles. Podría cambiarse por algo como:\nEn los siguientes pasos, nos encontramos con dos pares de W",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 122,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ndibles. Podría cambiarse por algo como:\nEn los siguientes pasos, nos encontramos con dos pares de When-Then, cada par de\nWhen-Then denota un comportamiento individual, por lo que se  estarían cubrien",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 123,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "hen-Then, cada par de\nWhen-Then denota un comportamiento individual, por lo que se  estarían cubriendo dos\ncomportamientos en una misma prueba:\n1.    Buscar desde la barra de búsquedas\n2.    Realizar",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 124,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "do dos\ncomportamientos en una misma prueba:\n1.    Buscar desde la barra de búsquedas\n2.    Realizar una búsqueda de imágenes\nUno de los principios de Gherkin y BDD, es que cada escenar io cubra un sol",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 125,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "una búsqueda de imágenes\nUno de los principios de Gherkin y BDD, es que cada escenar io cubra un solo\ncomportamiento.  Por lo tanto, debería haber dos escenar ios en lugar de uno. Además\nesta división",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 126,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o\ncomportamiento.  Por lo tanto, debería haber dos escenar ios en lugar de uno. Además\nesta división también nos dice que se está cubriendo un comp ortamiento innecesario,\nque podría estar cubierto en",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 127,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "también nos dice que se está cubriendo un comp ortamiento innecesario,\nque podría estar cubierto en otro escenario: La búsqueda  desde la barra de búsquedas\nSe debe respetar en todo momento la integr",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 128,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "otro escenario: La búsqueda  desde la barra de búsquedas\nSe debe respetar en todo momento la integridad de los tipos de  pasos:\nGiven Establece el estado inicial\nWhen realiza una acción\nThen verifica",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 129,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "idad de los tipos de  pasos:\nGiven Establece el estado inicial\nWhen realiza una acción\nThen verifica los resultados\nLa feature por tanto podría quedarse escrita de la siguient e manera:\nFeature : Búsq",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 130,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "los resultados\nLa feature por tanto podría quedarse escrita de la siguient e manera:\nFeature : Búsqueda en Google\nScenario : Búsqueda desde la barra de búsquedas\nGiven  un navegador web en la página",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 131,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ueda en Google\nScenario : Búsqueda desde la barra de búsquedas\nGiven  un navegador web en la página de inicio de Google\nWhen  el usuario introduce \"galletas\"  en la barra del buscador\nThen   los enlac",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 132,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "de inicio de Google\nWhen  el usuario introduce \"galletas\"  en la barra del buscador\nThen   los enlaces relacionados con \"galletas\"  se muestran en la página de\nresultados\nScenario : Búsqueda de imágen",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 133,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "es relacionados con \"galletas\"  se muestran en la página de\nresultados\nScenario : Búsqueda de imágenes\nGiven  los resultados de “galletas”  de una búsqueda de Google\nWhen   el usuario hace click en el",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 134,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "es\nGiven  los resultados de “galletas”  de una búsqueda de Google\nWhen   el usuario hace click en el link \"Imagenes\"  en la parte superior de\nla página de resultados\nThen   las imágenes relacionadas c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 135,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "link \"Imagenes\"  en la parte superior de\nla página de resultados\nThen   las imágenes relacionadas con \"galletas\"  se muestran en la página\nde resultados    Given  un navegador web en la página de ini",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 136,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "on \"galletas\"  se muestran en la página\nde resultados    Given  un navegador web en la página de inicio de Google\nReglas de estilo> Centrar la feature en las necesidades del cliente.\n> Limitar a una f",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 137,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "cio de Google\nReglas de estilo> Centrar la feature en las necesidades del cliente.\n> Limitar a una feature por archivo de feature. Esto fa cilita la búsqueda de features.\n> Limitar el número de escena",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 138,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "eature por archivo de feature. Esto fa cilita la búsqueda de features.\n> Limitar el número de escenarios por feature. Una buena  medida es una docena de\nescenarios por feature.\n> Limitar el número de",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 139,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rios por feature. Una buena  medida es una docena de\nescenarios por feature.\n> Limitar el número de pasos por escenario a menos de diez.\n> Limitar la longitud de caracteres de cada paso. (Longitud má",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 140,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "pasos por escenario a menos de diez.\n> Limitar la longitud de caracteres de cada paso. (Longitud má xima de 256 caracteres)\n> Utilizar la ortografía adecuada.\n> Usar la gramática adecuada.\n> Escribir",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 141,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "xima de 256 caracteres)\n> Utilizar la ortografía adecuada.\n> Usar la gramática adecuada.\n> Escribir con mayúscula la primera palabra de las palabras clave de Gherkin.\n> Escribir con mayúscula la prime",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 142,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "con mayúscula la primera palabra de las palabras clave de Gherkin.\n> Escribir con mayúscula la primera palabra en los títulos.\n> No escribir en mayúsculas las palabras en las frases del paso a paso a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 143,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ra palabra en los títulos.\n> No escribir en mayúsculas las palabras en las frases del paso a paso a menos que sean\nnombres propios.\n> No usar puntuación (específicamente puntos y comas) al final de la",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 144,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "menos que sean\nnombres propios.\n> No usar puntuación (específicamente puntos y comas) al final de las frases de paso a\npaso.\n> Usar espacios simples entre palabras.\n> Utilizar la sangría para el conte",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 145,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s frases de paso a\npaso.\n> Usar espacios simples entre palabras.\n> Utilizar la sangría para el contenido debajo de cada encabez ado de sección.\n> Separar las features y los escenarios con una o dos lí",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 146,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "nido debajo de cada encabez ado de sección.\n> Separar las features y los escenarios con una o dos lín eas en blanco.\n> Separar las tablas de ejemplos por una línea en blanco.\n> No separar los pasos de",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 147,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n eas en blanco.\n> Separar las tablas de ejemplos por una línea en blanco.\n> No separar los pasos dentro de un escenario con líneas en blanco.\n> Separar los delimitadoras de las tablas (“|”) de manera",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 148,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ntro de un escenario con líneas en blanco.\n> Separar los delimitadoras de las tablas (“|”) de manera unif orme.\n> Adoptar un conjunto estándar de nombres de etiquetas. Evitar los duplicados.\n> Escribi",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 149,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "unif orme.\n> Adoptar un conjunto estándar de nombres de etiquetas. Evitar los duplicados.\n> Escribir todos los nombres de las etiquetas en minúsculas y usar guiones (\"-\") para separar\nlas palabras.\n>",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 150,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "r todos los nombres de las etiquetas en minúsculas y usar guiones (\"-\") para separar\nlas palabras.\n> Limitar la longitud de los nombres de las etiquetas. (No sup erar los 50 caracteres)\n> La secuencia",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 151,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Limitar la longitud de los nombres de las etiquetas. (No sup erar los 50 caracteres)\n> La secuencia de verbos de un escenario debe corresponde r con el siguiente diagrama:\n> En un background se conte",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 152,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "de verbos de un escenario debe corresponde r con el siguiente diagrama:\n> En un background se contemplan únicamente los verbos Given. Aunque se podrá hacer\nuso del verbo When, única y exclusivamente",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 153,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "mplan únicamente los verbos Given. Aunque se podrá hacer\nuso del verbo When, única y exclusivamente porque es un escenario especial que se\nejecuta antes de la ejecución del resto de escenarios de la f",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 154,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "porque es un escenario especial que se\nejecuta antes de la ejecución del resto de escenarios de la feature.\n> El uso de And o But debe ser precedido siempre por un ver bo (Given, When, Then)\n16 Gherki",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 155,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "eature.\n> El uso de And o But debe ser precedido siempre por un ver bo (Given, When, Then)\n16 Gherkin: Guía rápida de buenas prácticas\nBuenas prácticas en Gherkin\nLa especificaciónes o features deben",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 156,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n: Guía rápida de buenas prácticas\nBuenas prácticas en Gherkin\nLa especificaciónes o features deben ser un resumen  de los casos más importantes/críticos de la\nfuncionalidad (en los que existe el ries",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 157,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ser un resumen  de los casos más importantes/críticos de la\nfuncionalidad (en los que existe el riesgo de ser m al interpretado y/o los casos que representen\nun fallo permanente), esto no significa qu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 158,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "go de ser m al interpretado y/o los casos que representen\nun fallo permanente), esto no significa que la espe cificación deba reflejar todo el detalle del\ncomportamiento, por lo que ésta no es toda la",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 159,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "e la espe cificación deba reflejar todo el detalle del\ncomportamiento, por lo que ésta no es toda la espec ificación existente, hay especificaciones\nmediante otros soportes como documentos de reglas,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 160,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "espec ificación existente, hay especificaciones\nmediante otros soportes como documentos de reglas, wireframes, maquetas, etc, y todo el\nconjunto de especificaciones conforman el DoR de un a Feature/U",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 161,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "wireframes, maquetas, etc, y todo el\nconjunto de especificaciones conforman el DoR de un a Feature/UserStory.\nLas features son una documentación viva, por lo que  habrá que aplicar consideraciones com",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 162,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "serStory.\nLas features son una documentación viva, por lo que  habrá que aplicar consideraciones como\nque los escenarios que se especifiquen deben ser en tendibles, mantenibles y automatizables, por\nl",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 163,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o\nque los escenarios que se especifiquen deben ser en tendibles, mantenibles y automatizables, por\nlo que si no se cumplen estas condiciones y existe otro formato donde se entiende mejor,\nentonces úse",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 164,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o que si no se cumplen estas condiciones y existe otro formato donde se entiende mejor,\nentonces úselo.\n17 Gherkin: Guía rápida de buenas prácticas\nCoberturaCon el objetivo de poder identificar las di",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 165,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lo.\n17 Gherkin: Guía rápida de buenas prácticas\nCoberturaCon el objetivo de poder identificar las diferentes\nfeatures y/o escenarios entre todas las especificac iones\nexistentes haremos uso del etique",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 166,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ferentes\nfeatures y/o escenarios entre todas las especificac iones\nexistentes haremos uso del etiquetado (tagging), cu ya\nsintaxis es la siguiente:\n@<feature-name>\nAlgunos ejemplos de etiquetas utiliz",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 167,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tado (tagging), cu ya\nsintaxis es la siguiente:\n@<feature-name>\nAlgunos ejemplos de etiquetas utilizadas pueden ser las siguien tes:\n@happyPath @to-implement\n@smokeTest@fast@slow\n@core\n@ignoring @qa@p",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 168,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "adas pueden ser las siguien tes:\n@happyPath @to-implement\n@smokeTest@fast@slow\n@core\n@ignoring @qa@pre @pro @all-env\nComo cobertura mínima, debe especificarse\naquel escenario que representa el @happyP",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 169,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "re @pro @all-env\nComo cobertura mínima, debe especificarse\naquel escenario que representa el @happyPath de\nuna funcionalidad, es decir, el escenario que\nprueba el objetivo por el que fue desarrollada",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 170,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ath de\nuna funcionalidad, es decir, el escenario que\nprueba el objetivo por el que fue desarrollada la\nfuncionalidad, así como los escenarios que tienen\nun valor crítico/riesgo de cara a negocio.\nEl e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 171,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "la\nfuncionalidad, así como los escenarios que tienen\nun valor crítico/riesgo de cara a negocio.\nEl escenario @happyPath se considera como el más flexible c uando tengamos la\nnecesidad de agregar más s",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 172,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "scenario @happyPath se considera como el más flexible c uando tengamos la\nnecesidad de agregar más steps que para negocio sean impo rtantes y aporte  valor\nresaltar la operativa (escenario más largo).",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 173,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "teps que para negocio sean impo rtantes y aporte  valor\nresaltar la operativa (escenario más largo).Etiquetado\n18 Gherkin: Guía rápida de buenas prácticas\n19 Gherkin: Guía rápida de buenas prácticas\nC",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 174,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Etiquetado\n18 Gherkin: Guía rápida de buenas prácticas\n19 Gherkin: Guía rápida de buenas prácticas\nCuando se automatice un escenario debe garantizarse  su consecuente OK en los entornos de\nintegración",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 175,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "uando se automatice un escenario debe garantizarse  su consecuente OK en los entornos de\nintegración continua. Se pueden automatizar con la mayor cantidad de alternativas posibles\n(p.e contra servicio",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 176,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "continua. Se pueden automatizar con la mayor cantidad de alternativas posibles\n(p.e contra servicios reales, servicios mockeados).  Se recomienda que en la medida de lo posible\nsea contra entornos lo",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 177,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s reales, servicios mockeados).  Se recomienda que en la medida de lo posible\nsea contra entornos lo más parecidos al entorno fin al, en el caso de que no se pueda dar un OK\nen dichos entornos, entonc",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 178,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "más parecidos al entorno fin al, en el caso de que no se pueda dar un OK\nen dichos entornos, entonces se recomienda la virtu alización\nPara virtualizar escenarios se debe tomar en cuenta  el criterio",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 179,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "es se recomienda la virtu alización\nPara virtualizar escenarios se debe tomar en cuenta  el criterio riesgo vs. coste. Es decir, si para\nautomatizar un escenario es necesario virtualizar u n servicio,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 180,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "riesgo vs. coste. Es decir, si para\nautomatizar un escenario es necesario virtualizar u n servicio, debe considerarse la inversión de\ntiempo que toma hacerlo, la criticidad del escenari o que se quie",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 181,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "debe considerarse la inversión de\ntiempo que toma hacerlo, la criticidad del escenari o que se quiere automatizar, consultas a\ntablas, servidores, hosts, etc. Con esta informació n se podrá determina",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 182,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "re automatizar, consultas a\ntablas, servidores, hosts, etc. Con esta informació n se podrá determinar si existen casos en los que\nconsiderar hacer la prueba manual. Por ejemplo, si se tiene un escenar",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 183,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "r si existen casos en los que\nconsiderar hacer la prueba manual. Por ejemplo, si se tiene un escenario donde automatizar una\nconsulta a tablas, hosts, obtener algún fichero req uiere mucho tiempo de c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 184,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "io donde automatizar una\nconsulta a tablas, hosts, obtener algún fichero req uiere mucho tiempo de cara a la prueba\nmanual, entonces debe considerarse si se automatiza  o no.\nSe debe intentar que toda",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 185,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ara a la prueba\nmanual, entonces debe considerarse si se automatiza  o no.\nSe debe intentar que todas aquellas características  de los productos y usuarios que se definan en\nel Given no se especifique",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 186,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s aquellas características  de los productos y usuarios que se definan en\nel Given no se especifiquen explícitamente. Sólo se  utilizarán datos concretos si se puede\nasegurar su mantenibilidad entre e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 187,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n explícitamente. Sólo se  utilizarán datos concretos si se puede\nasegurar su mantenibilidad entre entornos; en cualq uier otro caso se debe delegar la tarea a la\nimplementación del step.Automatizació",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 188,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ntornos; en cualq uier otro caso se debe delegar la tarea a la\nimplementación del step.Automatización\n20 Gherkin: Guía rápida de buenas prácticas\nEjemplo de mal uso de GherkinImaginar que se dispone d",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 189,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n\n20 Gherkin: Guía rápida de buenas prácticas\nEjemplo de mal uso de GherkinImaginar que se dispone de un sitio web y se quiere que los  usuarios\npuedan acceder a su espacio personal con un usuario y u",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 190,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "e un sitio web y se quiere que los  usuarios\npuedan acceder a su espacio personal con un usuario y un a contraseña.\nLa feature para este ejemplo podría ser:\n# BAD EXAMPLE! Do not copy.\nFeature : Login",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 191,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n a contraseña.\nLa feature para este ejemplo podría ser:\n# BAD EXAMPLE! Do not copy.\nFeature : Login con usuario y contraseña de un\nusuario del portal web\nScenario : Login correcto\nGiven  un usuario r",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 192,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "con usuario y contraseña de un\nusuario del portal web\nScenario : Login correcto\nGiven  un usuario registrado en el sistema\nWhen  hace login con su usuario y contraseña\nThen  debería tener acceso a su",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 193,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "egistrado en el sistema\nWhen  hace login con su usuario y contraseña\nThen  debería tener acceso a su espacio personal\nScenario : Login incorrecto\nGiven  un usuario registrado en el sistema\nWhen  hace",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 194,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "espacio personal\nScenario : Login incorrecto\nGiven  un usuario registrado en el sistema\nWhen  hace login con su usuario y contraseña incorrecta\nThen  no debería tener acceso a su espacio personalDe c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 195,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "login con su usuario y contraseña incorrecta\nThen  no debería tener acceso a su espacio personalDe cara a acceder al espacio personal de la web\nComo usuario\nQuiero hacer login con mi usuario y mi cont",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 196,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ara a acceder al espacio personal de la web\nComo usuario\nQuiero hacer login con mi usuario y mi contraseña\nReescritura de ese mismo escenario correctamente\nLos escenarios son muy genéricos, y se puede",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 197,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "raseña\nReescritura de ese mismo escenario correctamente\nLos escenarios son muy genéricos, y se puede identificar u na\nprecondición en los escenarios, para la cuál se puede utilizar  un\nBackground. Por",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 198,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "identificar u na\nprecondición en los escenarios, para la cuál se puede utilizar  un\nBackground. Por lo tanto refactorizando esa feature se podría tener lo\nsiguiente:\n# BAD EXAMPLE! Do not copy.\nFeatu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 199,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lo tanto refactorizando esa feature se podría tener lo\nsiguiente:\n# BAD EXAMPLE! Do not copy.\nFeature : Login con usuario y contraseña de un\nusuario del portal web\n(...)\nScenario : Login correcto\nGiv",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 200,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "re : Login con usuario y contraseña de un\nusuario del portal web\n(...)\nScenario : Login correcto\nGiven  un usuario registrado en el sistema\nWhen  hace login con su usuario y contraseña\nThen  debería t",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 201,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "en  un usuario registrado en el sistema\nWhen  hace login con su usuario y contraseña\nThen  debería tener acceso a su espacio\npersonal\nScenario : Login incorrecto\nGiven  un usuario registrado en el sis",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 202,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ener acceso a su espacio\npersonal\nScenario : Login incorrecto\nGiven  un usuario registrado en el sistem a\nWhen  hace login con su usuario y contraseña\nincorrecta\nThen  no debería tener acceso a su esp",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 203,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tem a\nWhen  hace login con su usuario y contraseña\nincorrecta\nThen  no debería tener acceso a su espacio\npersonal ??Feature : Login con usuario y contraseña de un\nusuario del portal web\n(...)\nBackgrou",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 204,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "acio\npersonal ??Feature : Login con usuario y contraseña de un\nusuario del portal web\n(...)\nBackground :\nGiven  Pepe es un usuario registrado del\nportal web\nAnd Pepe esta registrado con contraseña\n‘se",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 205,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "nd :\nGiven  Pepe es un usuario registrado del\nportal web\nAnd Pepe esta registrado con contraseña\n‘secret’\nScenario : Login correcto\nWhen  Pepe hace login con contraseña\n‘secret'\nThen  debería tener ac",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 206,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "cret’\nScenario : Login correcto\nWhen  Pepe hace login con contraseña\n‘secret'\nThen  debería tener acceso a su espacio\npersonal\nScenario : Login incorrecto\nWhen  Pepe hace login con contraseña ‘wrong’",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 207,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ceso a su espacio\npersonal\nScenario : Login incorrecto\nWhen  Pepe hace login con contraseña ‘wrong’\nThen  debería mostrar el error de contraseña\nincorrecta\n21 Gherkin: Guía rápida de buenas prácticas",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 208,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Then  debería mostrar el error de contraseña\nincorrecta\n21 Gherkin: Guía rápida de buenas prácticas\nEspecificaciones entendibles, mantenibles y automatizablesTodo escenario que se especifique debe ser",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 209,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Especificaciones entendibles, mantenibles y automatizablesTodo escenario que se especifique debe ser automatizado, p or lo que se\ndebe especificar aquellos escenarios que aporten mayor va lor a negoci",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 210,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "automatizado, p or lo que se\ndebe especificar aquellos escenarios que aporten mayor va lor a negocio y\nque mitiguen un riesgo a cambio de un coste asumible (crite rio riesgo vs\ncoste), una vez tomada",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 211,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "o y\nque mitiguen un riesgo a cambio de un coste asumible (crite rio riesgo vs\ncoste), una vez tomadas estas premisas en cuenta, todo  lo que\nespecifiquemos debe ser entendible, mantenible y automatiza",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 212,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s estas premisas en cuenta, todo  lo que\nespecifiquemos debe ser entendible, mantenible y automatizable.\nEntendible\nTodo lo que se especifique debe ser descrito con frases cla ras y concisas,\nde forma",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 213,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ble.\nEntendible\nTodo lo que se especifique debe ser descrito con frases cla ras y concisas,\nde forma que sea entendible. A continuación presentamos u n ejemplo de\nun escenario que no es entendible:\nEs",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 214,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "que sea entendible. A continuación presentamos u n ejemplo de\nun escenario que no es entendible:\nEscribir escenarios con muchos Steps puede generar conf usión con lo que\nse intenta expresar y hacer q",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 215,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "cribir escenarios con muchos Steps puede generar conf usión con lo que\nse intenta expresar y hacer que la persona que lo lea p ierda el foco, no se\ntrata de escribir en lenguaje natural lo que escribi",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 216,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ue la persona que lo lea p ierda el foco, no se\ntrata de escribir en lenguaje natural lo que escribirías en un lenguaje de\nprogramación. Es mucho más entendible escribir escenarios concretos y\nexpresa",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 217,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rías en un lenguaje de\nprogramación. Es mucho más entendible escribir escenarios concretos y\nexpresados a nivel de negocio, como se puede ver en el sigu iente\nejemplo:\n# BAD EXAMPLE! Do not copy.\nScen",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 218,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "dos a nivel de negocio, como se puede ver en el sigu iente\nejemplo:\n# BAD EXAMPLE! Do not copy.\nScenario Outline : Usuario con acceso administrador cuando el acceso de\nadministrador está a nivel de ap",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 219,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ario Outline : Usuario con acceso administrador cuando el acceso de\nadministrador está a nivel de aplicación y pantalla\nGiven  el usuario inicia sesión con \"userWithManager\"\nA nd el acceso administrad",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 220,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "licación y pantalla\nGiven  el usuario inicia sesión con \"userWithManager\"\nA nd el acceso administrador está activo\nAnd el acceso administrador \"<pantalla>\"  está activo\nAnd acceso \"<pantalla>\"  despué",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 221,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "or está activo\nAnd el acceso administrador \"<pantalla>\"  está activo\nAnd acceso \"<pantalla>\"  después de hacer login\nAnd la configuración del administrador por la pantalla de servicio responde\ndespués",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 222,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "s de hacer login\nAnd la configuración del administrador por la pantalla de servicio responde\ndespués\nAnd verifica la \"<pantalla>\"\nAnd verifica que no tiene acceso al botón administrador\nWhen  la confi",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 223,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "And verifica la \"<pantalla>\"\nAnd verifica que no tiene acceso al botón administrador\nWhen  la configuración del administrador por pantalla responde\nThen  verifica que tiene acceso al botón administra",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 224,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "guración del administrador por pantalla responde\nThen  verifica que tiene acceso al botón administrador\nNotar que en el ejemplo las cuentas son referenciados co n alias, ésto se\nrecomienda debido a qu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 225,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "dor\nNotar que en el ejemplo las cuentas son referenciados co n alias, ésto se\nrecomienda debido a que si el dato concreto (en este caso la  cuenta)\ncambia, sólo tendremos que actualizar el valor del a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 226,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "e si el dato concreto (en este caso la  cuenta)\ncambia, sólo tendremos que actualizar el valor del alias en un  fichero, el\nnombre del alias debe intentarse que sea de referencia.Scenario : Calcular e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 227,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "lias en un  fichero, el\nnombre del alias debe intentarse que sea de referencia.Scenario : Calcular el total de crédito y de débito\nGiven  cliente\nAnd tiene una cuenta \"corriente”  con \"1000 EUR”\nAnd t",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 228,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "l total de crédito y de débito\nGiven  cliente\nAnd tiene una cuenta \"corriente”  con \"1000 EUR”\nAnd tiene una cuenta \"débito”  con \"2000 EUR”\nAnd tiene una cuenta  \"débito”  con \"1500 EUR”\nWhen  el cli",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 229,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "iene una cuenta \"débito”  con \"2000 EUR”\nAnd tiene una cuenta  \"débito”  con \"1500 EUR”\nWhen  el cliente consulta en su posición global\nThen  tiene un débito de \"3500 EUR”\nAnd tiene un crédito de \"100",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 230,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ente consulta en su posición global\nThen  tiene un débito de \"3500 EUR”\nAnd tiene un crédito de \"1000 EUR”\n22 Gherkin: Guía rápida de buenas prácticas\nMantenible\nUn escenario es mantenible cuando un c",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 231,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "0 EUR”\n22 Gherkin: Guía rápida de buenas prácticas\nMantenible\nUn escenario es mantenible cuando un cambio en el softwar e no significa un cambio\nexponencial de escenarios. A continuación se presenta u",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 232,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ambio en el softwar e no significa un cambio\nexponencial de escenarios. A continuación se presenta un ejemplo de\nescenarios/operativas que no son mantenibles:\nObservando estos dos escenarios se eviden",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 233,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n ejemplo de\nescenarios/operativas que no son mantenibles:\nObservando estos dos escenarios se evidencia que son repe titivos y que describen el\nproceso de OTP con varios steps en todos los escenarios,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 234,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "cia que son repe titivos y que describen el\nproceso de OTP con varios steps en todos los escenarios,  pero si esa operativa cambia,\nse tendrían que modificar y sería muy tedioso.\n# BAD EXAMPLE! Do not",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 235,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "pero si esa operativa cambia,\nse tendrían que modificar y sería muy tedioso.\n# BAD EXAMPLE! Do not copy.\nScenario : Un usuario solicita un nuevo pin temporal para una tarjeta de crédito mediante la",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 236,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "copy.\nScenario : Un usuario solicita un nuevo pin temporal para una tarjeta de crédito mediante la\nmodalidad SMS\nGiven  soy un usuario con login \"0019-123456789A”  y password \"123456\"\nAnd se me envia",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 237,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "modalidad SMS\nGiven  soy un usuario con login \"0019-123456789A”  y password \"123456\"\nAnd se me envia la otp con valor \"123456\"\nAnd tengo un producto contratado <tipo> , <alias> , <emitida-plastico>  y",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 238,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "la otp con valor \"123456\"\nAnd tengo un producto contratado <tipo> , <alias> , <emitida-plastico>  y <código-estándar>\nWhen  creo una sesión con login \"0019-123456789A”  y password \"123456\"\nAnd consul",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 239,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "<código-estándar>\nWhen  creo una sesión con login \"0019-123456789A”  y password \"123456\"\nAnd consulto la posicion global\nThen  selecciono la tarjeta con nombre \"Mi tarjeta de credito\"  como tarjeta o",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 240,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "to la posicion global\nThen  selecciono la tarjeta con nombre \"Mi tarjeta de credito\"  como tarjeta origen\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"SMS\"\nAnd me solicita la clave OT",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 241,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "rigen\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"SMS\"\nAnd me solicita la clave OTP\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"SMS\" , con otp \"123456”\nAnd recibo u",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 242,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "P\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"SMS\" , con otp \"123456”\nAnd recibo un codigo de resultado \"ok\"\nAnd la respuesta contiene <campo> , <tipo>  y <condicion>\n# BAD EXAMPLE!",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 243,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n codigo de resultado \"ok\"\nAnd la respuesta contiene <campo> , <tipo>  y <condicion>\n# BAD EXAMPLE! Do not copy.\nScenario : Un usuario solicita un nuevo pin temporal para una tarjeta de crédito median",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 244,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "Do not copy.\nScenario : Un usuario solicita un nuevo pin temporal para una tarjeta de crédito mediante la\nmodalidad ONLINE\nGiven  soy un usuario con login \"0019-123456789A”  y password \"123456\"\nAnd se",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 245,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "te la\nmodalidad ONLINE\nGiven  soy un usuario con login \"0019-123456789A”  y password \"123456\"\nAnd se me envia la otp con valor \"123456\"\nAnd tengo un producto contratado <tipo> , <alias> , <emitida-pla",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 246,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "me envia la otp con valor \"123456\"\nAnd tengo un producto contratado <tipo> , <alias> , <emitida-plastico>  y <código-estándar>\nWhen  creo una sesión con login \"0019-123456789A”  y password \"123456\"\nA",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 247,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "stico>  y <código-estándar>\nWhen  creo una sesión con login \"0019-123456789A”  y password \"123456\"\nAnd consulto la posicion global\nThen  selecciono la tarjeta con nombre \"Mi tarjeta de credito\"  como",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 248,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "nd consulto la posicion global\nThen  selecciono la tarjeta con nombre \"Mi tarjeta de credito\"  como tarjeta origen\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"ONLINE\"\nAnd me solicita",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 249,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tarjeta origen\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"ONLINE\"\nAnd me solicita la clave OTP\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"ONLINE\" , con otp \"12345",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 250,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "la clave OTP\nAnd creo un pin temporal para mi tarjeta usando la modalidad \"ONLINE\" , con otp \"123456”\nAnd recibo un codigo de resultado \"ok\"\nAnd la respuesta contiene <campo> , <tipo>  y <condicion>",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 251,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "6”\nAnd recibo un codigo de resultado \"ok\"\nAnd la respuesta contiene <campo> , <tipo>  y <condicion>\n23 Gherkin: Guía rápida de buenas prácticas\nComo se comentó anteriormente, especificando los escenar",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 252,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "23 Gherkin: Guía rápida de buenas prácticas\nComo se comentó anteriormente, especificando los escenar ios de esta forma, si hay un\ncambio en la operativa de OTP (para el ejemplo) sólo se te ndría que a",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 253,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ios de esta forma, si hay un\ncambio en la operativa de OTP (para el ejemplo) sólo se te ndría que actualizar un\nescenario.Para resolver estos casos, de operativa de negocio que s uele repetirse en mu",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 254,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ctualizar un\nescenario.Para resolver estos casos, de operativa de negocio que s uele repetirse en muchas\nfuncionalidades (OTP, firmas, etc.), es recomendable sacar la operativa a un escenario\naparte d",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 255,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "chas\nfuncionalidades (OTP, firmas, etc.), es recomendable sacar la operativa a un escenario\naparte de componentes, y simplemente en los escenarios q ue hagan uso de la\noperativa colocar un sólo paso q",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 256,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "e componentes, y simplemente en los escenarios q ue hagan uso de la\noperativa colocar un sólo paso que haga referencia a es e escenario. Ya que si la\noperativa cambia sólo hay que cambiar un escenario",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 257,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ue haga referencia a es e escenario. Ya que si la\noperativa cambia sólo hay que cambiar un escenario. La r ecomendación es de que un\ncambio en el software como mucho debe significar un cambio  en un e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 258,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": ". La r ecomendación es de que un\ncambio en el software como mucho debe significar un cambio  en un escenario.\nPor tanto, se podría reescribir el escenario de la siguiente manera:\nEn primer lugar, se e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 259,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "scenario.\nPor tanto, se podría reescribir el escenario de la siguiente manera:\nEn primer lugar, se extrae el proceso de la OTP en un es cenario aparte de componentes.\nY en segundo lugar, se define el",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 260,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "xtrae el proceso de la OTP en un es cenario aparte de componentes.\nY en segundo lugar, se define el escenario que se quiere e specificar (continuando con el\nejemplo anterior):\nScenario : Un usuario co",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 261,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "escenario que se quiere e specificar (continuando con el\nejemplo anterior):\nScenario : Un usuario con operativa en curso solicita la clave OTP *\nGiven  un usuario ”usuario1”  con operativa en curso\nWh",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 262,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n operativa en curso solicita la clave OTP *\nGiven  un usuario ”usuario1”  con operativa en curso\nWhen  el usuario solicita la clave OTP\nAnd el usuario recibe la clave SMS\nAnd introduce la clave SMS e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 263,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "en  el usuario solicita la clave OTP\nAnd el usuario recibe la clave SMS\nAnd introduce la clave SMS en la operativa\nThen  la clave SMS es validada correctamente\nScenario : Un usuario crea un nuevo pin",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 264,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n la operativa\nThen  la clave SMS es validada correctamente\nScenario : Un usuario crea un nuevo pin temporal para una tarjeta de crédito mediante la modalidad\nONLINE\nGiven  un usuario ”usuario1”  con",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 265,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "temporal para una tarjeta de crédito mediante la modalidad\nONLINE\nGiven  un usuario ”usuario1”  con tarjeta de crédito\nWhen  el usuario crea un pin temporal para su tarjeta usando la modalidad \"ONLINE",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 266,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "tarjeta de crédito\nWhen  el usuario crea un pin temporal para su tarjeta usando la modalidad \"ONLINE\"\nAnd el usuario autoriza la operación *\nThen  recibe un código de resultado satisfactorio\n24 Gherki",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 267,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "\"\nAnd el usuario autoriza la operación *\nThen  recibe un código de resultado satisfactorio\n24 Gherkin: Guía rápida de buenas prácticas\nAutomatizable\nCuando se va  a automatizar un escenario debe consi",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 268,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n: Guía rápida de buenas prácticas\nAutomatizable\nCuando se va  a automatizar un escenario debe considerars e el riesgo que mitiga y el\ncoste que tiene, ya que en ocasiones será necesario vir tualizar,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 269,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "derars e el riesgo que mitiga y el\ncoste que tiene, ya que en ocasiones será necesario vir tualizar, por tema de\ndisponibilidad de entornos y datos. Pero no siempre tendrá sent ido virtualizarlo todo,",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 270,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "por tema de\ndisponibilidad de entornos y datos. Pero no siempre tendrá sent ido virtualizarlo todo, se\nverá con un ejemplo:\nEn este caso no tiene sentido virtualizar un escenario de b uscador, debido",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 271,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "se\nverá con un ejemplo:\nEn este caso no tiene sentido virtualizar un escenario de b uscador, debido a que los\ndatos serán siempre los mismos y tendrá que implementarse toda la lógica del buscador,\ny",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 272,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "a que los\ndatos serán siempre los mismos y tendrá que implementarse toda la lógica del buscador,\ny ese no es el objetivo.\nSe debe tomar como premisa si lo que se va a automatizar  cuesta lo mismo que",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 273,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "ese no es el objetivo.\nSe debe tomar como premisa si lo que se va a automatizar  cuesta lo mismo que\ndesarrollarlo, entonces se tendrá que tener en cuenta ot ras formas alternativas de\nrealizar dicha",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 274,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "desarrollarlo, entonces se tendrá que tener en cuenta ot ras formas alternativas de\nrealizar dicha prueba.\nScenario Outline : Buscador de movimientos por texto\nGiven  soy un usuario con movimientos e",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 275,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "prueba.\nScenario Outline : Buscador de movimientos por texto\nGiven  soy un usuario con movimientos en cuenta\nAnd selecciono el buscador de movimientos\nWhen  realizo una búsqueda de movimientos con el",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 276,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "n cuenta\nAnd selecciono el buscador de movimientos\nWhen  realizo una búsqueda de movimientos con el texto <texto>\nThen  la búsqueda incluye el <texto>\nExamples :\n| texto    |\n| prepago |\n| trans   |\n|",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 277,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "texto <texto>\nThen  la búsqueda incluye el <texto>\nExamples :\n| texto    |\n| prepago |\n| trans   |\n| atm     |\nhttps://qualt.io/",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 278,
+      "original_type": "pdf"
+    }
+  },
+  {
+    "text": "atm     |\nhttps://qualt.io/",
+    "metadata": {
+      "date_created": "2026-05-08",
+      "document_type": "PDF",
+      "summary": "User-provided document",
+      "notes": "No additional notes provided",
+      "source_file": "Gherkin Método para buenas prácticas.pdf",
+      "chunk_index": 279,
+      "original_type": "pdf"
+    }
+  }
+]

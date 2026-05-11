@@ -8,7 +8,6 @@ similarity search for retrieval-augmented generation (RAG) workflows.
 
 import faiss
 import numpy as np
-import pickle
 import os
 
 
@@ -19,6 +18,7 @@ class VectorStore:
     Attributes:
         index (faiss.IndexFlatL2): FAISS index for storing and searching embeddings.
         texts (list): List of original text documents corresponding to embeddings.
+        metadatas (list): List of JSON metadata objects aligned with texts.
         dim (int): Dimension of embeddings (default: 384 for all-MiniLM-L6-v2).
     """
 
@@ -32,8 +32,9 @@ class VectorStore:
         """
         self.index = faiss.IndexFlatL2(dim)
         self.texts = []
+        self.metadatas = []
 
-    def add(self, embeddings, texts):
+    def add(self, embeddings, texts, metadatas=None):
         """
         Add new document embeddings to the vector store while preventing duplicates.
         
@@ -41,16 +42,23 @@ class VectorStore:
             embeddings (np.ndarray or list): Vector embeddings of shape (n_docs, dim).
             texts (list): List of text documents corresponding to embeddings.
                          Must have same length as embeddings.
+            metadatas (list, optional): List of metadata objects for each document.
+                         If provided, must have same length as texts.
         
         Returns:
-            None: Modifies the index and texts in-place.
+            None: Modifies the index, texts, and metadatas in-place.
         """
         new_texts = []
+        new_metadatas = []
 
         # Filter out duplicate texts to avoid redundancy
-        for t in texts:
+        for idx, t in enumerate(texts):
             if t not in self.texts:
                 new_texts.append(t)
+                if metadatas is not None and idx < len(metadatas):
+                    new_metadatas.append(metadatas[idx])
+                else:
+                    new_metadatas.append({})
 
         if not new_texts:
             return
@@ -61,6 +69,7 @@ class VectorStore:
         # Add only embeddings for new texts
         self.index.add(embeddings[:len(new_texts)])
         self.texts.extend(new_texts)
+        self.metadatas.extend(new_metadatas)
 
     def search(self, query_embedding, k=3):
         """
@@ -92,21 +101,26 @@ class VectorStore:
         
         Files created:
             - {path}/index.faiss: Binary FAISS index
-            - {path}/metadata.pkl: Pickled list of text documents
+            - {path}/metadata.json: JSON metadata list for each stored text chunk
         
         Returns:
             None
         """
         os.makedirs(path, exist_ok=True)
         faiss.write_index(self.index, f"{path}/index.faiss")
-        with open(f"{path}/metadata.pkl", "wb") as f:
-            pickle.dump(self.texts, f)
+        metadata_items = [
+            {"text": text, "metadata": metadata}
+            for text, metadata in zip(self.texts, self.metadatas)
+        ]
+        with open(f"{path}/metadata.json", "w", encoding="utf-8") as f:
+            import json
+            json.dump(metadata_items, f, ensure_ascii=False, indent=2)
 
     def load(self, path="vectorstore"):
         """
         Load a previously saved index and metadata from disk.
         
-        Attempts to load the FAISS index and document texts from the specified path.
+        Attempts to load the FAISS index and document metadata from the specified path.
         Silently fails if files don't exist (useful for first-time initialization).
         
         Args:
@@ -114,15 +128,19 @@ class VectorStore:
                                 Defaults to "vectorstore".
         
         Returns:
-            None: Modifies index and texts in-place.
+            None: Modifies index, texts, and metadatas in-place.
         
         Note:
             If loading fails, the store retains its current state without raising errors.
         """
         try:
             self.index = faiss.read_index(f"{path}/index.faiss")
-            with open(f"{path}/metadata.pkl", "rb") as f:
-                self.texts = pickle.load(f)
+            if os.path.exists(f"{path}/metadata.json"):
+                with open(f"{path}/metadata.json", "r", encoding="utf-8") as f:
+                    import json
+                    metadata_items = json.load(f)
+                    self.texts = [item.get("text", "") for item in metadata_items]
+                    self.metadatas = [item.get("metadata", {}) for item in metadata_items]
         except Exception:
             # Silently fail - useful for first initialization when files don't exist yet
             pass

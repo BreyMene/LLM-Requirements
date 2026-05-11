@@ -18,9 +18,16 @@ Architecture:
 - Frontend: HTML/CSS/JavaScript (static/)
 """
 
-from fastapi import FastAPI, HTTPException
+from datetime import datetime
+import json
+from pathlib import Path
+from io import BytesIO
+
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+
+from PyPDF2 import PdfReader
 
 from app.services.rag import retrieve_context, index_documents
 from app.services.llm import generate
@@ -42,6 +49,61 @@ def root():
         FileResponse: The index.html file for the web interface.
     """
     return FileResponse("static/index.html")
+
+
+def allowed_file_extension(filename: str) -> bool:
+    """Return whether the uploaded file type is allowed."""
+    allowed_extensions = {".pdf", ".md", ".markdown", ".txt"}
+    suffix = Path(filename).suffix.lower()
+    return suffix in allowed_extensions
+
+
+def extract_text_from_pdf(file_bytes: bytes) -> str:
+    """Extract text from PDF bytes using PyPDF2."""
+    reader = PdfReader(BytesIO(file_bytes))
+    text = []
+    for page in reader.pages:
+        page_text = page.extract_text() or ""
+        text.append(page_text)
+    return "\n".join(text).strip()
+
+
+def chunk_text(text: str, size: int = 500, overlap: int = 150):
+    """Split text into overlapping chunks for better retrieval."""
+    text = "\n".join(line.strip() for line in text.splitlines() if line.strip())
+    if len(text) <= size:
+        return [text]
+
+    chunks = []
+    step = max(size - overlap, 100)
+    start = 0
+    while start < len(text):
+        chunk = text[start:start + size].strip()
+        if chunk:
+            chunks.append(chunk)
+        start += step
+    return chunks
+
+
+def infer_document_type(filename: str) -> str:
+    """Infer document type from the uploaded filename extension."""
+    mapping = {
+        ".pdf": "pdf",
+        ".md": "markdown",
+        ".markdown": "markdown",
+        ".txt": "text"
+    }
+    return mapping.get(Path(filename).suffix.lower(), "text")
+
+
+def build_metadata(date_created: str, document_type: str, summary: str, notes: str):
+    """Create a consistent JSON metadata object for each document chunk."""
+    return {
+        "date_created": date_created or datetime.utcnow().isoformat(),
+        "document_type": document_type or "text",
+        "summary": summary or "User-provided document",
+        "notes": notes or "No additional notes provided"
+    }
 
 
 @app.post("/train")
@@ -94,35 +156,95 @@ def train(data: dict):
     if not docs:
         raise HTTPException(status_code=400, detail="No docs provided")
 
-    # Validation: Remove empty/whitespace-only strings and texts shorter than 6 chars
-    clean_docs = []
-    for d in docs:
-        if isinstance(d, str):
-            d = d.strip()
-            if len(d) > 5:
-                clean_docs.append(d)
+    prepared_items = []
+    for item in docs:
+        # Accept either raw string text or structured document objects
+        if isinstance(item, dict):
+            content = item.get("content", "").strip()
+            if len(content) <= 5:
+                continue
+            metadata = build_metadata(
+                item.get("date_created", ""),
+                item.get("document_type", ""),
+                item.get("summary", ""),
+                item.get("notes", "")
+            )
+        else:
+            content = str(item).strip()
+            if len(content) <= 5:
+                continue
+            metadata = build_metadata("", "text", "User-provided text", "Added via UI")
 
-    if not clean_docs:
-        raise HTTPException(status_code=400, detail="No valid docs")
+        chunked_texts = chunk_text(content)
+        for idx, chunk in enumerate(chunked_texts):
+            prepared_items.append({
+                "content": chunk,
+                "metadata": {
+                    **metadata,
+                    "chunk_index": idx + 1,
+                    "original_length": len(content)
+                }
+            })
 
-    # Chunking: Split long documents into 200-character segments
-    # This improves retrieval accuracy by creating more granular searchable units
-    def chunk_text(text, size=200):
-        """Split text into overlapping chunks of specified size."""
-        return [text[i:i+size] for i in range(0, len(text), size)]
+    if not prepared_items:
+        raise HTTPException(status_code=400, detail="No valid docs after processing")
 
-    final_docs = []
-    for doc in clean_docs:
-        chunks = chunk_text(doc)
-        final_docs.extend(chunks)
-
-    # Index documents in the vector store and persist to disk
-    index_documents(final_docs)
+    index_documents(prepared_items)
 
     return {
         "status": "ok",
         "original_docs": len(docs),
-        "processed_docs": len(final_docs)
+        "processed_docs": len(prepared_items)
+    }
+
+
+@app.post("/train-file")
+async def train_file(
+    file: UploadFile = File(...),
+    date_created: str = Form(None),
+    document_type: str = Form(None),
+    summary: str = Form(None),
+    notes: str = Form(None),
+):
+    """
+    Upload a PDF or markdown document and index its text with metadata.
+    """
+    if not allowed_file_extension(file.filename):
+        raise HTTPException(status_code=400, detail="Unsupported file format")
+
+    content_bytes = await file.read()
+    extension = Path(file.filename).suffix.lower()
+
+    if extension == ".pdf":
+        text = extract_text_from_pdf(content_bytes)
+    else:
+        text = content_bytes.decode("utf-8", errors="ignore")
+
+    if not text or len(text.strip()) <= 5:
+        raise HTTPException(status_code=400, detail="No valid text extracted from the uploaded file")
+
+    detected_type = infer_document_type(file.filename)
+    metadata = build_metadata(date_created, detected_type, summary, notes)
+    chunks = chunk_text(text)
+    prepared_items = [
+        {
+            "content": chunk,
+            "metadata": {
+                **metadata,
+                "source_file": file.filename,
+                "chunk_index": idx + 1,
+                "original_type": detected_type
+            }
+        }
+        for idx, chunk in enumerate(chunks)
+    ]
+
+    index_documents(prepared_items)
+    return {
+        "status": "ok",
+        "source_file": file.filename,
+        "chunks_indexed": len(prepared_items),
+        "metadata": metadata
     }
 
 
