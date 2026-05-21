@@ -10,6 +10,65 @@ This application helps software engineers and requirements analysts:
 - **Build a knowledge base** of reference requirements for context-aware suggestions
 - **Follow best practices** with IEEE 830 and Gherkin Given-When-Then formats
 
+## Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd LLM-Requirements
+   ```
+2. Create and activate the Python virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install Python dependencies:
+   ```bash
+   pip install --upgrade pip setuptools wheel
+   pip install -r requirements-utf8.txt
+   ```
+4. Install frontend dependencies and build the UI:
+   ```bash
+   cd frontend
+   npm install
+   npm run build
+   cd ..
+   ```
+5. Make sure Ollama is running and `mistral` is available:
+   ```bash
+   ollama serve
+   ollama pull mistral
+   ```
+6. Start the backend server:
+   ```bash
+   PYTHONPATH="$PWD" ./venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+   ```
+7. Open the app in your browser:
+   - Frontend: http://127.0.0.1:8000/
+   - API docs: http://127.0.0.1:8000/docs
+
+### Note
+If the system does not have a `python` command, use `python3` or `./venv/bin/python` inside the virtual environment.
+
+### Optional swap support
+If `mistral` fails due to RAM, add temporary swap:
+```bash
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+
+### If you update the frontend
+Rebuild after changes:
+```bash
+cd frontend
+npm run build
+cd ..
+```
+
+### Then continue with the backend start above.
+
 ### Key Features
 
 ✅ **Standards-Based Analysis**
@@ -100,8 +159,10 @@ LLM-Requirements/
 │   │   └── embeddings.py           # Text embedding service
 │   └── prompts/
 │       └── templates.py             # Prompt templates (analysis & generation)
-├── static/
-│   └── index.html                   # Web interface
+├── frontend/                       # React frontend source and build config
+├── static/                        # Generated frontend assets served by FastAPI
+│   ├── assets/
+│   └── index.html
 ├── vectorstore/
 │   ├── index.faiss                 # FAISS index (persisted)
 │   └── metadata.pkl                # Document metadata
@@ -117,7 +178,8 @@ LLM-Requirements/
 ### Prerequisites
 
 1. **Python 3.8+**
-2. **Ollama** installed and running locally
+2. **Node.js 18+** and **npm**
+3. **Ollama** installed and running locally
    - Download: https://ollama.ai
    - Run: `ollama serve` (default: localhost:11434)
    - Pull model: `ollama pull mistral` (or your preferred model)
@@ -139,6 +201,14 @@ LLM-Requirements/
 3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
+   ```
+
+4. **Install frontend dependencies and build**
+   ```bash
+   cd frontend
+   npm install
+   npm run build
+   cd ..
    ```
 
 4. **Verify Ollama is running**

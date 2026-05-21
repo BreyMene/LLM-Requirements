@@ -36,8 +36,16 @@ from app.prompts.templates import analysis, generation
 # Initialize FastAPI application
 app = FastAPI()
 
-# Mount static files (HTML, CSS, JavaScript) at /static endpoint
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# Resolve static directory relative to this file so the app works regardless
+# of the working directory used to start the server.
+BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_DIR = BASE_DIR / "static"
+
+# Mount static files (HTML, CSS, JavaScript) at /assets endpoint
+app.mount("/assets", StaticFiles(directory=str(STATIC_DIR / "assets")), name="assets")
+
+# Keep /static available for compatibility if needed
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 
 @app.get("/")
@@ -48,7 +56,7 @@ def root():
     Returns:
         FileResponse: The index.html file for the web interface.
     """
-    return FileResponse("static/index.html")
+    return FileResponse(str(STATIC_DIR / "index.html"))
 
 
 def allowed_file_extension(filename: str) -> bool:
